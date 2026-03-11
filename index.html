@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Code — Crack the Code of Human Connection</title>
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0D1825;
+      color: #F7F9FC;
+      overflow-x: hidden;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,217,192,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,217,192,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #00D9C0 0%, #00A896 50%, #4DE8D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-coral { color: #FF6B6B; }
+
+    .glow-coral { box-shadow: 0 0 35px rgba(255,107,107,0.3); }
+    .glow-teal  { box-shadow: 0 0 35px rgba(0,217,192,0.2); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      background: rgba(0,217,192,0.1);
+      border: 1px solid rgba(0,217,192,0.25);
+      color: #00D9C0;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,217,192,0.12), transparent);
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .framework-card {
+      transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+    .framework-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,217,192,0.12);
+      border-color: rgba(0,217,192,0.35);
+    }
+
+    .btn-primary {
+      transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(255,107,107,0.4);
+      background-color: #E55E5E;
+    }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-ghost {
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+    .btn-ghost:hover {
+      background-color: rgba(0,217,192,0.08);
+      color: #00D9C0;
+    }
+
+    .nav-link { transition: color 150ms ease; }
+    .nav-link:hover { color: #00D9C0; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up    { animation: fadeUp 0.7s ease forwards; }
+    .fade-up-d1 { animation: fadeUp 0.7s 0.1s ease both; }
+    .fade-up-d2 { animation: fadeUp 0.7s 0.2s ease both; }
+    .fade-up-d3 { animation: fadeUp 0.7s 0.35s ease both; }
+    .fade-up-d4 { animation: fadeUp 0.7s 0.5s ease both; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #00D9C0;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .email-input:focus {
+      outline: none;
+      border-color: #00D9C0;
+      box-shadow: 0 0 0 1px #00D9C0;
+    }
+
+    .manifesto-line {
+      border-left: 2px solid #00D9C0;
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50" style="backdrop-filter: blur(16px); background: rgba(13,24,37,0.85); border-bottom: 1px solid rgba(0,217,192,0.08);">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 group">
+          <img src="logo.svg" alt="Social Code" class="h-8 w-auto" />
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link text-slate-400 text-sm font-medium">About</a>
+          <a href="#origin" class="nav-link text-slate-400 text-sm font-medium">Origin</a>
+          <a href="#frameworks" class="nav-link text-slate-400 text-sm font-medium">Frameworks</a>
+          <a href="#manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
+          <a href="#resources" class="nav-link text-slate-400 text-sm font-medium">Resources</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="http://localhost:3000/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
+            FREE ASSESSMENT
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="flex-col gap-2 pb-4 md:hidden">
+        <a href="#origin" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Origin</a>
+        <a href="#frameworks" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Frameworks</a>
+        <a href="#manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
+        <a href="#resources" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Resources</a>
+        <a href="#start" class="mt-2 block text-center px-5 py-3 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;" onclick="toggleMenu()">START HERE</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="relative grid-bg min-h-screen flex items-center pt-16 overflow-hidden">
+    <div class="hero-orb w-96 h-96 top-20 left-1/2 -translate-x-1/2" style="background: rgba(0,217,192,0.1);"></div>
+    <div class="hero-orb w-64 h-64 bottom-20 left-10" style="background: rgba(77,232,212,0.06);"></div>
+    <div class="hero-orb w-80 h-80 top-40 right-0" style="background: rgba(255,107,107,0.05);"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+
+      <div class="fade-up">
+        <span class="badge">Jungian Psychology + Systematic Frameworks · Built by an introvert. For introverts.</span>
+      </div>
+
+      <h1 class="fade-up-d1 mt-8 text-5xl sm:text-6xl lg:text-7xl font-black leading-none tracking-tight">
+        Still awkward.<br/>Still weird.<br/>
+        <span class="text-gradient">Just competent.</span>
+      </h1>
+
+      <p class="fade-up-d2 mt-8 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed" style="font-family: 'Work Sans', sans-serif; color: #94a3b8;">
+        Social Code gives introverts the actual mechanics to start conversations, build real connections, and stop overthinking — without pretending to be someone else.
+      </p>
+
+      <p class="fade-up-d2 mt-3 text-base max-w-xl mx-auto" style="font-family: 'Work Sans', sans-serif; color: #64748b;">
+        Not "just be confident." Not affirmations. Frameworks. Reps. Results.
+      </p>
+
+      <div class="fade-up-d3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="http://localhost:3000/assess" class="btn-primary glow-coral inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
+          FIND YOUR TYPE — FREE
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#frameworks" class="btn-ghost inline-flex items-center gap-2 px-6 py-4 rounded-xl text-base font-medium text-slate-400 border border-slate-700">
+          See the frameworks
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="fade-up-d4 mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+        <div class="text-center">
+          <div class="text-4xl font-black text-gradient">10k+</div>
+          <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Doors knocked</div>
+        </div>
+        <div class="text-center border-x border-slate-800">
+          <div class="text-4xl font-black" style="color: #F7F9FC;">7</div>
+          <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Core frameworks</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-black text-gradient">0</div>
+          <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Bullshit advice</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none" style="background: linear-gradient(to bottom, transparent, #0D1825);"></div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- ABOUT ME -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Photo -->
+      <div class="flex justify-center lg:justify-end order-first lg:order-last">
+        <div class="relative">
+          <div class="w-72 h-80 sm:w-80 sm:h-96 rounded-3xl overflow-hidden" style="border: 1px solid rgba(0,217,192,0.15); box-shadow: 0 0 60px rgba(0,217,192,0.08);">
+            <img
+              src="shavi.jpg"
+              alt="Shavi — Founder of Social Code"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div style="display:none; background:#131E2B; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; gap:8px;">
+              <span style="font-size:48px;">📸</span>
+              <span style="color:#334155; font-size:13px; font-family:'Work Sans',sans-serif;">Add shavi.jpg to /social-code/</span>
+            </div>
+          </div>
+          <!-- Accent -->
+          <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl flex items-center justify-center" style="background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.2); backdrop-filter: blur(8px);">
+            <span class="text-xs font-bold text-center leading-tight px-2" style="color: #FF6B6B;">Still<br/>weird.</span>
+          </div>
+          <div class="absolute -top-4 -right-4 w-24 h-24 rounded-2xl flex items-center justify-center" style="background: rgba(0,217,192,0.08); border: 1px solid rgba(0,217,192,0.2); backdrop-filter: blur(8px);">
+            <span class="text-xs font-bold text-center leading-tight px-2" style="color: #00D9C0;">Just<br/>competent.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div>
+        <span class="badge">About Me</span>
+        <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
+          Hi, I'm <span class="text-gradient">Shavi.</span>
+        </h2>
+        <div class="mt-6 space-y-4 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+          <p>
+            There's a specific kind of loneliness that nobody talks about. Not the kind where you have nobody around. The kind where you're surrounded by people and still feel completely invisible. You watch everyone else move through rooms like they got a manual you never received. Conversations flow for them. Connections happen naturally. And you go home wondering what's wrong with you.
+          </p>
+          <p>
+            I know that feeling well. I spent years inside it.
+          </p>
+          <p>
+            The thing nobody told me, the thing I had to figure out the long way, is that nothing was wrong with me. What I was experiencing had a name. Carl Jung, the psychologist who first defined introversion, described it simply as drawing your energy from within rather than from the world around you. That's it. A way of processing. An orientation. <strong class="text-white font-semibold">Not a flaw.</strong>
+          </p>
+          <p>
+            But somewhere along the way culture turned introversion into a diagnosis. A reason you're bad at parties. A personality type that comes pre-packaged with social failure. They gave you a label and left you with nothing else.
+          </p>
+          <p>
+            That's the part I'm here to dismantle.
+          </p>
+          <p>
+            Because the real problem was never who you are. It was that nobody ever sat you down and taught you the actual mechanics of human connection. The frameworks. The systems. How conversation actually works. How people actually operate.
+          </p>
+          <p class="text-white font-medium">
+            We're the introverts who got tired of being lonely. The socially anxious who learned systems instead of waiting for confidence that never came.
+          </p>
+        </div>
+        <div class="mt-8">
+          <p class="text-lg font-bold text-white">Shavi, Founder</p>
+          <p class="text-sm text-slate-500 mt-0.5" style="font-family: 'Work Sans', sans-serif;">@GetSocialCode</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- ORIGIN -->
+  <section id="origin" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <span class="badge">The Origin</span>
+        <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
+          This wasn't built in a<br/>
+          <span class="text-coral">classroom.</span>
+        </h2>
+        <div class="mt-6 space-y-4 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+          <p>
+            I moved somewhere new knowing absolutely nobody. No network. No safety net. People meant well when they told me to just be confident, just put myself out there, just be myself. I tried that. It didn't work. Because confidence without skill is just wishful thinking, and being yourself only helps if you already know how to connect.
+          </p>
+          <p>
+            Eventually I ended up in door-to-door sales. Pest control, solar, fiber optic. Not because I had a plan. Because I needed money and it was the only thing available. I genuinely hated every second of it at first. Every knock felt like volunteering for rejection.
+          </p>
+          <p>
+            But I kept going. <strong class="text-white font-semibold">Over 10,000 doors.</strong> Over 10,000 moments where I had about five seconds to make something work before someone decided to listen or walk away. There was no room for theory out there. No time to think about what you should have said on the drive home. You learned or you failed, over and over, until the learning started to stick.
+          </p>
+          <p>
+            Somewhere in the middle of all that I found Carl Jung's work on psychological development. And something clicked. What I had been doing without realizing it had a name. Individuation. Facing the parts of yourself you've spent your whole life avoiding, through direct controlled exposure to the exact situations that frighten you most. I wasn't learning tricks. I was finishing developmental work that most people never start.
+          </p>
+          <p>
+            I came out of it a different person in the ways that actually matter. Still introverted. Still someone who needs quiet to recharge. But no longer helpless in a room full of people. No longer replaying every conversation for hours afterward wondering what went wrong.
+          </p>
+          <p class="text-white font-medium">
+            Social Code is the systematic version of everything I built through that process. Every framework, every mechanic, every insight I had to earn the hard way. So you don't have to start from scratch the way I did.
+          </p>
+        </div>
+        <div class="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-xl" style="background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.15);">
+          <span class="text-sm font-bold" style="color: #FF6B6B;">Still awkward. Still weird. Just competent.</span>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="space-y-4">
+        <div class="rounded-2xl p-6 border border-white/5" style="background: #131E2B;">
+          <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">The Problem With Other Advice</div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
+              <span class="text-sm text-slate-400">"Just be confident" — cool. How? They never tell you.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
+              <span class="text-sm text-slate-400">"Be yourself" — if that worked, you wouldn't be here.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
+              <span class="text-sm text-slate-400">"Work the room" — built by extroverts, for extroverts.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
+              <span class="text-sm text-slate-400">"Visualize success" — you need mechanics, not affirmations.</span>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 border glow-teal" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
+          <div class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: #00D9C0;">The Social Code Difference</div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
+              <span class="text-sm text-slate-300">Jungian psychology — not pop psychology platitudes</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
+              <span class="text-sm text-slate-300">Systematic frameworks you can study and repeat</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
+              <span class="text-sm text-slate-300">Built for introverts — accounts for your energy</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
+              <span class="text-sm text-slate-300">Fewer conversations, more depth — quality over quantity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- FRAMEWORKS -->
+  <section id="frameworks" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <span class="badge">The Frameworks</span>
+      <h2 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight leading-tight">
+        Three systems.<br/>
+        <span class="text-gradient">Zero fluff.</span>
+      </h2>
+      <p class="mt-5 text-slate-400 text-lg max-w-xl mx-auto" style="font-family: 'Work Sans', sans-serif;">
+        Each framework is a distilled, repeatable system. Study it. Practice it. Use it.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+
+      <!-- Fearless Approach System -->
+      <article class="framework-card rounded-2xl p-7 border border-slate-800 flex flex-col" style="background: #131E2B;">
+        <div>
+          <div class="flex items-start justify-between mb-5">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(77,232,212,0.1); color: #4DE8D4;">FA</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Fearless Approach System</h3>
+          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #4DE8D4;">Overcoming Approach Anxiety</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
+            The full architecture for approaching anyone — when to go, how to go, what to say. Built for introverts who need to know who is worth the energy before spending it.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(77,232,212,0.08); color: #4DE8D4;">Includes SPARK</span>
+            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(77,232,212,0.08); color: #4DE8D4;">Includes 3-Second Scan</span>
+          </div>
+        </div>
+        <div class="mt-auto">
+          <div class="fw-email-form" data-framework="fearless-approach" data-color="#4DE8D4">
+            <button class="fw-trigger w-full py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: rgba(77,232,212,0.12); color: #4DE8D4;">
+              Email me this framework →
+            </button>
+            <div class="fw-input-row hidden mt-3 flex gap-2">
+              <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+              <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #4DE8D4; color: #080F18;">Send</button>
+            </div>
+            <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #4DE8D4;"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TALK Check -->
+      <article class="framework-card rounded-2xl p-7 border border-slate-800 flex flex-col" style="background: #131E2B;">
+        <div>
+          <div class="flex items-start justify-between mb-5">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(0,217,192,0.12); color: #00D9C0;">TC</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">TALK Check</h3>
+          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #00D9C0;">Tone · Attention · Language · Kinetics</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
+            The 10-second delivery layer you run before every conversation. Eliminate the signals that undercut your actual competence — tone, eye contact, language, body language.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(0,217,192,0.08); color: #00D9C0;">Delivery</span>
+            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(0,217,192,0.08); color: #00D9C0;">Non-verbal</span>
+          </div>
+        </div>
+        <div class="mt-auto">
+          <div class="fw-email-form" data-framework="talk-check" data-color="#00D9C0">
+            <button class="fw-trigger w-full py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: rgba(0,217,192,0.12); color: #00D9C0;">
+              Email me this framework →
+            </button>
+            <div class="fw-input-row hidden mt-3 flex gap-2">
+              <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+              <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #00D9C0; color: #080F18;">Send</button>
+            </div>
+            <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #00D9C0;"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stop Replaying -->
+      <article class="framework-card rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(255,107,107,0.25);">
+        <div>
+          <div class="flex items-start justify-between mb-5">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">SR</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">Paid</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Stop Replaying</h3>
+          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #FF6B6B;">End the 2 AM Overthink Loop</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
+            For introverts who replay every conversation for days. Turn 3 days of rumination into 10 minutes of processing. The Conversation Audit, Redirect Protocol, and Pre-Game System.
+          </p>
+          <div class="space-y-2 mb-5">
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <span style="color: #FF6B6B;">✓</span> E-Book — the full framework
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <span style="color: #FF6B6B;">✓</span> 30-day Implementation Workbook included
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto">
+          <a href="#start" class="block w-full text-center py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #FF6B6B; color: white;">
+            Get the E-Book →
+          </a>
+          <p class="text-xs text-slate-600 text-center mt-2" style="font-family: 'Work Sans', sans-serif;">Includes workbook · Instant delivery</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.fw-email-form').forEach(function(form) {
+      var trigger = form.querySelector('.fw-trigger');
+      var inputRow = form.querySelector('.fw-input-row');
+      var emailInput = form.querySelector('.fw-email');
+      var sendBtn = form.querySelector('.fw-send');
+      var msg = form.querySelector('.fw-msg');
+      var framework = form.dataset.framework;
+      var color = form.dataset.color;
+
+      trigger.addEventListener('click', function() {
+        trigger.classList.add('hidden');
+        inputRow.classList.remove('hidden');
+        emailInput.focus();
+      });
+
+      sendBtn.addEventListener('click', function() {
+        var email = emailInput.value.trim();
+        if (!email) return;
+
+        sendBtn.textContent = 'Sending...';
+        sendBtn.disabled = true;
+
+        fetch('http://localhost:3000/api/send-framework', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, framework: framework })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          inputRow.classList.add('hidden');
+          msg.classList.remove('hidden');
+          if (data.success) {
+            msg.textContent = 'Check your inbox — PDF is on its way.';
+            msg.style.color = color;
+          } else {
+            msg.textContent = data.error || 'Something went wrong. Try again.';
+            msg.style.color = '#FF6B6B';
+          }
+        })
+        .catch(function() {
+          inputRow.classList.add('hidden');
+          msg.classList.remove('hidden');
+          msg.textContent = 'Something went wrong. Try again.';
+          msg.style.color = '#FF6B6B';
+        });
+      });
+
+      emailInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') sendBtn.click();
+      });
+    });
+  </script>
+
+
+  <div class="divider"></div>
+
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" class="py-24" style="background: #101B28;">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-14">
+        <span class="badge">The Manifesto</span>
+        <h2 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight">
+          Who we are.<br/>
+          <span class="text-gradient">Who we're not.</span>
+        </h2>
+      </div>
+
+      <div class="space-y-8">
+
+        <div>
+          <h3 class="text-lg font-bold text-white mb-4">WHO WE ARE</h3>
+          <div class="manifesto-line">
+            <p class="text-slate-300 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+              We're the reformed screen-era casualties. The introverts who got tired of being lonely. The socially anxious who learned systems instead of waiting for confidence that never came.
+            </p>
+          </div>
+          <div class="manifesto-line">
+            <p class="text-slate-300 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+              We don't do theory. We don't do affirmations. We don't do "just be yourself."
+            </p>
+          </div>
+          <p class="text-xl font-bold text-white">We do frameworks. Reps. Results.</p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-4" style="color: #FF6B6B;">WHO WE'RE AGAINST</h3>
+
+          <div class="space-y-5">
+            <div class="p-5 rounded-xl" style="background: #131E2B;">
+              <h4 class="text-sm font-bold text-white mb-2">The Confidence Cult</h4>
+              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+                They sell empty platitudes. "Believe in yourself!" "Visualize success!" Cool. <em>How?</em> They never tell you — because if they taught you actual systems, you wouldn't need them anymore. They keep you dependent. We make you competent.
+              </p>
+            </div>
+            <div class="p-5 rounded-xl" style="background: #131E2B;">
+              <h4 class="text-sm font-bold text-white mb-2">The Extrovert Playbook</h4>
+              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+                "Work the room." "Talk to 50 people at the event." That's their game. Not yours. Your game is fewer conversations, more depth. Strategic energy management, not marathon socializing. Quality connections, not quantity contacts.
+              </p>
+            </div>
+            <div class="p-5 rounded-xl" style="background: #131E2B;">
+              <h4 class="text-sm font-bold text-white mb-2">The Networking Industrial Complex</h4>
+              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+                LinkedIn coaches. Networking events. "Build your personal brand!" They teach you to collect business cards and fake enthusiasm. They don't teach you how to READ people, START conversations, or BUILD genuine connections. We teach the mechanics they're too scared to admit exist.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl text-center glow-teal" style="background: #131E2B; border: 1px solid rgba(0,217,192,0.15);">
+          <blockquote class="text-2xl sm:text-3xl font-black text-white leading-tight">
+            "Until you make the unconscious conscious,<br/>
+            it will direct your life,<br/>
+            and you will call it fate."
+          </blockquote>
+          <p class="mt-4 text-sm font-medium" style="color: #00D9C0;">— Carl Jung</p>
+          <p class="mt-3 text-sm text-slate-500" style="font-family: 'Work Sans', sans-serif;">Social Code is that process applied to social engagement. You're not performing — you're consciously developing.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- RESOURCES / PRODUCTS -->
+  <section id="resources" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="badge">Free Resources</span>
+      <h2 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight">
+        Start with these.<br/>
+        <span class="text-gradient">Apply them today.</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+      <div class="rounded-2xl p-7 border border-white/5 hover:border-white/10 transition-all" style="background: #131E2B;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,217,192,0.12);">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 3h12v12H3z" stroke="#00D9C0" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M6 7h6M6 10h4" stroke="#00D9C0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Fearless Approach System</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5" style="font-family: 'Work Sans', sans-serif;">
+          The complete guide to approaching anyone, building deep connections, and finding your people. Jungian psychology meets practical frameworks.
+        </p>
+        <a href="#start" class="text-sm font-semibold" style="color: #00D9C0;">Get it free →</a>
+      </div>
+
+      <div class="rounded-2xl p-7 border border-white/5 hover:border-white/10 transition-all" style="background: #131E2B;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(255,107,107,0.12);">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="7" stroke="#FF6B6B" stroke-width="1.5"/>
+            <path d="M9 5v4l3 2" stroke="#FF6B6B" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Stop Replaying — E-Book + Workbook</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5" style="font-family: 'Work Sans', sans-serif;">
+          Turn 3 days of rumination into 10 minutes of processing. The Conversation Audit, Redirect Protocol, and 30-day implementation plan.
+        </p>
+        <a href="#start" class="text-sm font-semibold" style="color: #FF6B6B;">Get it free →</a>
+      </div>
+
+      <div class="rounded-2xl p-7 border border-white/5 hover:border-white/10 transition-all" style="background: #131E2B;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(77,232,212,0.1);">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 2l2 5.5H17l-5 3.5 2 5.5L9 13l-5 3.5 2-5.5L1 7.5h6L9 2z" stroke="#4DE8D4" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">TALK Check</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5" style="font-family: 'Work Sans', sans-serif;">
+          The 10-second delivery framework you run before any conversation. Tone. Attention. Language. Kinetics. Never undercut your competence again.
+        </p>
+        <a href="#start" class="text-sm font-semibold" style="color: #4DE8D4;">Get it free →</a>
+      </div>
+
+      <div class="rounded-2xl p-7 border glow-teal" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(0,217,192,0.12);">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="7" r="3" stroke="#00D9C0" stroke-width="1.5"/>
+            <path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#00D9C0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Full Framework Library</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5" style="font-family: 'Work Sans', sans-serif;">
+          SPARK, SHIELD, BRAVE, 3-Second Social Scan + more. All seven frameworks, full content, in one place.
+        </p>
+        <a href="#start" class="text-sm font-semibold" style="color: #00D9C0;">Get access →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section id="start" class="py-28 relative overflow-hidden">
+    <div class="hero-orb w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background: rgba(0,217,192,0.08);"></div>
+    <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
+        Ready to crack<br/>
+        <span class="text-gradient">the social code?</span>
+      </h2>
+      <p class="mt-6 text-lg text-slate-400 max-w-md mx-auto leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+        Drop your email. Get the Fearless Approach System free. No fluff. No "just believe in yourself." Just the frameworks.
+      </p>
+
+      <form class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleSubmit(event)">
+        <label for="email-input" class="sr-only">Email address</label>
+        <input
+          id="email-input"
+          type="email"
+          required
+          placeholder="Enter your email"
+          autocomplete="email"
+          class="email-input flex-1 px-5 py-4 rounded-xl text-sm text-white placeholder-slate-500 border border-slate-700 transition-colors"
+          style="background: #131E2B;"
+        />
+        <button
+          type="submit"
+          class="btn-primary glow-coral px-6 py-4 rounded-xl text-sm font-bold text-white whitespace-nowrap"
+          style="background: #FF6B6B; letter-spacing: 0.02em;"
+        >
+          CRACK THE CODE
+        </button>
+      </form>
+
+      <p id="form-msg" class="mt-4 text-sm hidden" style="font-family: 'Work Sans', sans-serif;"></p>
+      <p class="mt-4 text-sm text-slate-600" style="font-family: 'Work Sans', sans-serif;">Free. No credit card. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer style="background: #080F18; border-top: 1px solid rgba(0,217,192,0.06);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <img src="logo.svg" alt="Social Code" class="h-8 w-auto opacity-75" />
+        <nav class="flex items-center gap-6">
+          <a href="#origin" class="nav-link text-xs text-slate-600 hover:text-slate-400">Origin</a>
+          <a href="#frameworks" class="nav-link text-xs text-slate-600 hover:text-slate-400">Frameworks</a>
+          <a href="#manifesto" class="nav-link text-xs text-slate-600 hover:text-slate-400">Manifesto</a>
+          <a href="https://www.instagram.com/getsocialcode" target="_blank" rel="noopener noreferrer" class="nav-link text-xs text-slate-600 hover:text-slate-400">@GetSocialCode</a>
+        </nav>
+        <p class="text-xs text-slate-700" style="font-family: 'Work Sans', sans-serif;">&copy; 2026 Social Code. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('menu-btn');
+      const isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const msg = document.getElementById('form-msg');
+      const email = document.getElementById('email-input').value.trim();
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      msg.classList.add('hidden');
+      try {
+        const res = await fetch('https://social-code-app.vercel.app/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          msg.textContent = "You're in. Check your inbox — the framework is on its way.";
+          msg.style.color = '#00D9C0';
+          e.target.reset();
+        } else {
+          msg.textContent = data.error || 'Something went wrong. Try again.';
+          msg.style.color = '#FF6B6B';
+        }
+      } catch {
+        msg.textContent = 'Could not connect. Try again later.';
+        msg.style.color = '#FF6B6B';
+      }
+      btn.disabled = false;
+      btn.textContent = 'CRACK THE CODE';
+      msg.classList.remove('hidden');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
