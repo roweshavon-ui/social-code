@@ -148,7 +148,7 @@
           <a href="#resources" class="nav-link text-slate-400 text-sm font-medium">Resources</a>
         </div>
         <div class="hidden md:flex items-center gap-3">
-          <a href="http://localhost:3000/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
+          <a href="https://social-code-app.vercel.app/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
             FREE ASSESSMENT
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -198,7 +198,7 @@
       </p>
 
       <div class="fade-up-d3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="http://localhost:3000/assess" class="btn-primary glow-coral inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
+        <a href="https://social-code-app.vercel.app/assess" class="btn-primary glow-coral inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
           FIND YOUR TYPE — FREE
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,7 +525,7 @@
         sendBtn.textContent = 'Sending...';
         sendBtn.disabled = true;
 
-        fetch('http://localhost:3000/api/send-framework', {
+        fetch('https://social-code-app.vercel.app/api/send-framework', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: email, framework: framework })
