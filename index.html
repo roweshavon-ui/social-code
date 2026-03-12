@@ -18,6 +18,12 @@
       overflow-x: hidden;
     }
 
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,107,0); }
+      50% { box-shadow: 0 0 20px 6px rgba(255,107,107,0.35); }
+    }
+    .glow-pulse { animation: glowPulse 2.8s ease-in-out infinite; }
+
     .grid-bg {
       background-image:
         linear-gradient(rgba(0,217,192,0.04) 1px, transparent 1px),
@@ -180,13 +186,17 @@
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
 
+      <!-- Logo in hero -->
+      <div class="fade-up flex justify-center mb-6">
+        <img src="logo.svg" alt="Social Code" class="h-20 w-auto" style="filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(130deg);" />
+      </div>
+
       <div class="fade-up">
         <span class="badge">Jungian Psychology + Systematic Frameworks · Built by an introvert. For introverts.</span>
       </div>
 
       <h1 class="fade-up-d1 mt-8 text-5xl sm:text-6xl lg:text-7xl font-black leading-none tracking-tight">
-        Still awkward.<br/>Still weird.<br/>
-        <span class="text-gradient">Just competent.</span>
+        <span id="typing-text"></span><span id="typing-cursor" style="color:#00D9C0;">|</span>
       </h1>
 
       <p class="fade-up-d2 mt-8 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed" style="font-family: 'Work Sans', sans-serif; color: #94a3b8;">
@@ -198,7 +208,7 @@
       </p>
 
       <div class="fade-up-d3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://app.joinsocialcode.com/assess" class="btn-primary glow-coral inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
+        <a href="https://app.joinsocialcode.com/assess" class="btn-primary glow-pulse inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
           FIND YOUR TYPE — FREE
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -771,6 +781,51 @@
   </script>
 
   <script>
+    /* ── Typing effect ── */
+    const lines = ["Still awkward.", "Still weird.", "Just competent."];
+    const colors = ["#F7F9FC", "#F7F9FC", "#00D9C0"];
+    let lineIndex = 0, charIndex = 0, isDeleting = false, phase = 0;
+    const el = document.getElementById("typing-text");
+    const cursor = document.getElementById("typing-cursor");
+
+    function type() {
+      const line = lines[phase];
+      if (!isDeleting) {
+        el.innerHTML = lines.slice(0, phase).map((l, i) =>
+          `<span style="color:${colors[i]}">${l}</span><br/>`
+        ).join("") + `<span style="color:${colors[phase]}">${line.slice(0, charIndex + 1)}</span>`;
+        charIndex++;
+        if (charIndex === line.length) {
+          if (phase === lines.length - 1) {
+            cursor.style.display = "none";
+            return;
+          }
+          setTimeout(() => { phase++; charIndex = 0; type(); }, 500);
+          return;
+        }
+      }
+      setTimeout(type, 60);
+    }
+    setTimeout(type, 800);
+
+    /* ── Scroll reveal ── */
+    const revealEls = document.querySelectorAll("section, article, .framework-card");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = "1";
+          e.target.style.transform = "translateY(0)";
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(24px)";
+      el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+      observer.observe(el);
+    });
+
     async function sendStopReplaying() {
       const emailInput = document.getElementById('sr-email');
       const msg = document.getElementById('sr-msg');
