@@ -475,7 +475,7 @@
         <div>
           <div class="flex items-start justify-between mb-5">
             <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">SR</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">Paid</span>
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.12); color: #00D9C0;">Free</span>
           </div>
           <h3 class="text-lg font-bold text-white">Stop Replaying</h3>
           <p class="text-xs font-medium mt-0.5 mb-4" style="color: #FF6B6B;">End the 2 AM Overthink Loop</p>
@@ -492,10 +492,14 @@
           </div>
         </div>
         <div class="mt-auto">
-          <a href="#start" class="block w-full text-center py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #FF6B6B; color: white;">
-            Get the E-Book →
-          </a>
-          <p class="text-xs text-slate-600 text-center mt-2" style="font-family: 'Work Sans', sans-serif;">Includes workbook · Instant delivery</p>
+          <div class="flex gap-2">
+            <input id="sr-email" type="email" placeholder="your@email.com" class="flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+            <button onclick="sendStopReplaying()" class="px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #FF6B6B; color: white;">
+              Get it Free →
+            </button>
+          </div>
+          <p id="sr-msg" class="text-xs text-center mt-2" style="color: #00D9C0; display: none;">Sent! Check your inbox.</p>
+          <p class="text-xs text-slate-600 text-center mt-2" style="font-family: 'Work Sans', sans-serif;">Free · Instant delivery to your inbox</p>
         </div>
       </article>
 
@@ -764,6 +768,26 @@
         if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       });
     });
+  </script>
+
+  <script>
+    async function sendStopReplaying() {
+      const emailInput = document.getElementById('sr-email');
+      const msg = document.getElementById('sr-msg');
+      const email = emailInput.value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailInput.style.borderColor = 'rgba(255,107,107,0.5)';
+        return;
+      }
+      emailInput.style.borderColor = '';
+      await fetch('https://app.joinsocialcode.com/api/send-framework', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, framework: 'stop-replaying' }),
+      });
+      emailInput.value = '';
+      msg.style.display = 'block';
+    }
   </script>
 
 </body>
