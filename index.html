@@ -422,58 +422,44 @@
 
     <div class="grid lg:grid-cols-3 gap-6">
 
-      <!-- Fearless Approach System -->
-      <article class="framework-card rounded-2xl p-7 border border-slate-800 flex flex-col" style="background: #131E2B;">
-        <div>
-          <div class="flex items-start justify-between mb-5">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(77,232,212,0.1); color: #4DE8D4;">FA</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Fearless Approach System</h3>
-          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #4DE8D4;">Overcoming Approach Anxiety</p>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
-            The full architecture for approaching anyone — when to go, how to go, what to say. Built for introverts who need to know who is worth the energy before spending it.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(77,232,212,0.08); color: #4DE8D4;">Includes SPARK</span>
-            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(77,232,212,0.08); color: #4DE8D4;">Includes 3-Second Scan</span>
-          </div>
-        </div>
-        <div class="mt-auto">
-          <div class="fw-email-form" data-framework="fearless-approach" data-color="#4DE8D4">
-            <button class="fw-trigger w-full py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: rgba(77,232,212,0.12); color: #4DE8D4;">
-              Email me this framework →
-            </button>
-            <div class="fw-input-row hidden mt-3 flex gap-2">
-              <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
-              <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #4DE8D4; color: #080F18;">Send</button>
+      <!-- Free Bundle — FAS + TALK Check (spans 2 columns on lg) -->
+      <article class="framework-card lg:col-span-2 rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
+        <div class="flex flex-col md:flex-row md:gap-10">
+          <!-- FAS details -->
+          <div class="flex-1 mb-6 md:mb-0">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(77,232,212,0.1); color: #4DE8D4;">FA</div>
+              <span class="text-xs px-2.5 py-1 rounded-full font-semibold md:hidden" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle</span>
             </div>
-            <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #4DE8D4;"></p>
+            <h3 class="text-base font-bold text-white">Fearless Approach System</h3>
+            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #4DE8D4;">Overcoming Approach Anxiety</p>
+            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+              The full architecture for approaching anyone — when to go, how to go, what to say. Includes SPARK and the 3-Second Scan.
+            </p>
+          </div>
+          <!-- divider -->
+          <div class="hidden md:block w-px bg-white/5 self-stretch"></div>
+          <!-- TALK Check details -->
+          <div class="flex-1">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(0,217,192,0.12); color: #00D9C0;">TC</div>
+            </div>
+            <h3 class="text-base font-bold text-white">TALK Check</h3>
+            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #00D9C0;">Tone · Attention · Language · Kinetics</p>
+            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+              The 10-second delivery layer you run before every conversation. Start here — fastest to use in the real world.
+            </p>
           </div>
         </div>
-      </article>
 
-      <!-- TALK Check -->
-      <article class="framework-card rounded-2xl p-7 border border-slate-800 flex flex-col" style="background: #131E2B;">
-        <div>
-          <div class="flex items-start justify-between mb-5">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(0,217,192,0.12); color: #00D9C0;">TC</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free</span>
+        <div class="mt-6 pt-6 border-t border-white/5">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle — Both PDFs in one email</span>
+            <span class="text-xs text-slate-500" style="font-family: 'Work Sans', sans-serif;">Start with TALK Check, then FAS</span>
           </div>
-          <h3 class="text-lg font-bold text-white">TALK Check</h3>
-          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #00D9C0;">Tone · Attention · Language · Kinetics</p>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
-            The 10-second delivery layer you run before every conversation. Eliminate the signals that undercut your actual competence — tone, eye contact, language, body language.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(0,217,192,0.08); color: #00D9C0;">Delivery</span>
-            <span class="text-xs px-2.5 py-1 rounded-full" style="background: rgba(0,217,192,0.08); color: #00D9C0;">Non-verbal</span>
-          </div>
-        </div>
-        <div class="mt-auto">
-          <div class="fw-email-form" data-framework="talk-check" data-color="#00D9C0">
-            <button class="fw-trigger w-full py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: rgba(0,217,192,0.12); color: #00D9C0;">
-              Email me this framework →
+          <div class="fw-email-form" data-framework="fearless-approach" data-color="#00D9C0">
+            <button class="fw-trigger w-full py-3 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #00D9C0; color: #080F18;">
+              Get Both Free Frameworks →
             </button>
             <div class="fw-input-row hidden mt-3 flex gap-2">
               <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
@@ -539,7 +525,7 @@
         sendBtn.textContent = 'Sending...';
         sendBtn.disabled = true;
 
-        fetch('https://social-code-app.vercel.app/api/send-framework', {
+        fetch('https://app.joinsocialcode.com/api/send-framework', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: email, framework: framework })
@@ -549,7 +535,7 @@
           inputRow.classList.add('hidden');
           msg.classList.remove('hidden');
           if (data.success) {
-            msg.textContent = 'Check your inbox — PDF is on its way.';
+            msg.textContent = 'Check your inbox — both PDFs are on their way. Start with TALK Check.';
             msg.style.color = color;
           } else {
             msg.textContent = data.error || 'Something went wrong. Try again.';
