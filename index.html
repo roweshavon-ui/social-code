@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Code — Crack the Code of Human Connection</title>
+  <title>Social Code — Crack the Code of Real Human Connection</title>
+  <meta name="description" content="Social Code gives introverts the real mechanics to start conversations, build genuine connections, and stop overthinking every interaction." />
+  <meta property="og:title" content="Social Code — Crack the Code of Real Human Connection" />
+  <meta property="og:description" content="Still awkward. Still weird. Just competent. Science-backed social frameworks for introverts grounded in Jungian psychology." />
+  <meta property="og:image" content="https://joinsocialcode.com/og-image.png" />
+  <meta property="og:url" content="https://joinsocialcode.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Social Code — Crack the Code of Real Human Connection" />
+  <meta name="twitter:description" content="Still awkward. Still weird. Just competent. Science-backed social frameworks for introverts." />
+  <meta name="twitter:image" content="https://joinsocialcode.com/og-image.png" />
   <link rel="icon" href="favicon.ico" />
   <script defer src="/_vercel/insights/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -461,9 +471,13 @@
             <button class="fw-trigger w-full py-3 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #00D9C0; color: #080F18;">
               Get Both Free Frameworks →
             </button>
-            <div class="fw-input-row hidden mt-3 flex gap-2">
-              <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
-              <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #00D9C0; color: #080F18;">Send</button>
+            <div class="fw-input-row hidden mt-3 space-y-2">
+              <input type="text" placeholder="Your first name" class="fw-name w-full px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+              <div class="flex gap-2">
+                <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+                <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #00D9C0; color: #080F18;">Send</button>
+              </div>
+              <p class="text-xs text-slate-600" style="font-family: 'Work Sans', sans-serif;">By submitting, you agree to receive emails from Social Code. Unsubscribe anytime.</p>
             </div>
             <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #00D9C0;"></p>
           </div>
@@ -506,6 +520,7 @@
     document.querySelectorAll('.fw-email-form').forEach(function(form) {
       var trigger = form.querySelector('.fw-trigger');
       var inputRow = form.querySelector('.fw-input-row');
+      var nameInput = form.querySelector('.fw-name');
       var emailInput = form.querySelector('.fw-email');
       var sendBtn = form.querySelector('.fw-send');
       var msg = form.querySelector('.fw-msg');
@@ -515,11 +530,12 @@
       trigger.addEventListener('click', function() {
         trigger.classList.add('hidden');
         inputRow.classList.remove('hidden');
-        emailInput.focus();
+        nameInput.focus();
       });
 
       sendBtn.addEventListener('click', function() {
         var email = emailInput.value.trim();
+        var name = nameInput.value.trim();
         if (!email) return;
 
         sendBtn.textContent = 'Sending...';
@@ -528,7 +544,7 @@
         fetch('https://app.joinsocialcode.com/api/send-framework', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, framework: framework })
+          body: JSON.stringify({ email: email, name: name, framework: framework })
         })
         .then(function(r) { return r.json(); })
         .then(function(data) {
@@ -552,6 +568,9 @@
 
       emailInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') sendBtn.click();
+      });
+      nameInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') emailInput.focus();
       });
     });
   </script>
@@ -911,7 +930,7 @@
             <svg class="faq-icon flex-shrink-0 transition-transform duration-200" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="#00D9C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="faq-body hidden px-6 pb-5">
-            <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">Yes. 20 questions. Your Jungian type. Your social strengths and what to actually work on. No credit card. Nothing on the other side trying to sell you something. Just free.</p>
+            <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">Yes. 30 questions. Your Jungian type. Your social strengths and what to actually work on. No credit card. Nothing on the other side trying to sell you something. Just free.</p>
           </div>
         </div>
 
@@ -946,7 +965,7 @@
         <span class="text-gradient">Start there.</span>
       </h2>
       <p class="mt-6 text-lg text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-        20 questions. Free. Find your Jungian type, your social strengths, and practice real conversations in the Simulator.
+        30 questions. Free. Find your Jungian type, your social strengths, and practice real conversations in the Simulator.
       </p>
       <a href="https://app.joinsocialcode.com/assess" class="mt-10 btn-primary glow-coral inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B; letter-spacing: 0.02em;">
         FIND YOUR TYPE — FREE
