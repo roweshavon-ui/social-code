@@ -20,13 +20,28 @@
 - [x] Add dedicated 1:1 coaching waitlist section to page
 - [x] Add width/height attributes to img tags (CLS fix)
 
-## Blog
+## Blog & SEO
 - [x] Blog post: "Why introverts are actually better at deep conversations" — published Apr 22 2026
 - [x] Blog post page SEO — added canonical, Twitter cards, og:image, og:publishedTime, og:authors, Article JSON-LD (applies to all posts)
 - [x] 10-post content calendar researched and written (Apr 29 – Jun 30 2026) — topics from Reddit signal, competitor gaps, adjacent niches
 - [x] Auto-publish cron — Vercel cron runs every Tuesday 9am UTC, flips scheduled drafts live automatically
 - [x] Admin drafts page — /admin/drafts shows full scheduled queue with countdown to go-live dates
 - [x] Add CRON_SECRET to Vercel environment variables (Production) and redeploy to activate cron
+- [x] Extended content calendar to 20 weeks (through Sep 2026) + 8 backlog topics — see drafts/content-calendar.md
+- [x] Blog moved to main domain — all links now /blog (not app subdomain), canonical tags updated in Next.js app
+- [x] Sitemap updated — non-www, all 7 pages included, lastmod current
+- [x] OG/Twitter tags added to all secondary pages (about, frameworks, coaching, manifesto)
+- [x] Press page live at /press — bio, topics, contact for journalist/podcast outreach
+
+## Backlinks (all free — see drafts/backlink-strategy.md)
+- [ ] Sign up for HARO (helpareporter.com) — answer queries 3x/week, free journalist links
+- [ ] Get listed on Coach.me — free coaching directory, DA link
+- [ ] Get listed on Product Hunt — list the free assessment as a product
+- [ ] Get listed on Indie Hackers — post your story, free profile link
+- [ ] Pitch Introvert Dear guest post — highest single link value in niche, free to submit
+- [ ] Post Week 1 blog content to r/introvert + r/socialskills after publishing
+- [ ] Email 10 "best introvert blogs" resource pages — template in backlink-strategy.md
+- [ ] Pitch 2 podcasts — Introvert Dear Podcast + The Introvert's Edge (pitch angle in backlink-strategy.md)
 
 ## App (social-code-app)
 - [x] Handle `coaching-waitlist` in `/api/send-framework` — sends confirmation email to user + notification to shavi@joinsocialcode.com, saves lead to Supabase
