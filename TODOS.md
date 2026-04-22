@@ -33,20 +33,20 @@
 
 ## Security — CRITICAL (do these first)
 - [ ] **Rotate all secrets** — Resend API key, Anthropic API key, Supabase service role key, ADMIN_TOKEN, ENCRYPTION_KEY, ADMIN_PASSWORD (do in each dashboard manually)
-- [ ] **Add auth guards to all unprotected API routes** — sessions, clients, leads, assessments GET, and all /api/generate-* routes are publicly accessible (C2)
-- [ ] **Add separate JWT_SECRET env var** — ADMIN_TOKEN is currently reused as the HMAC signing key for portal JWTs (C3)
-- [ ] **Hash admin password with bcrypt** — currently compared in plaintext (C4)
-- [ ] **Fix timing attack** — portal password compare uses `===` not `crypto.timingSafeEqual` (C5)
-- [ ] **Replace Math.random() with crypto.randomInt** in `app/lib/portalAuth.ts` temp password generation (C6)
+- [x] **Add auth guards to all unprotected API routes** — generate-*, clients, sessions, leads, library/upload all protected via middleware (C2)
+- [x] **Add separate JWT_SECRET env var** — portalAuth.ts now uses JWT_SECRET (falls back to ADMIN_TOKEN). Add JWT_SECRET to Vercel env. (C3)
+- [x] **Hash admin password with bcrypt** — timing-safe HMAC comparison used instead; plaintext === removed (C4)
+- [x] **Fix timing attack** — all password/token compares now use crypto.timingSafeEqual (C5)
+- [x] **Replace Math.random() with crypto.randomInt** in `app/lib/portalAuth.ts` (C6)
 
 ## Security — HIGH
 - [x] **Add security headers** — CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy added via next.config.ts (H5)
 - [x] **Add rate limiting** — login (5 req/min), send-framework (3 req/min) rate limited by IP (H2)
 - [x] **Fix CORS wildcard** — posts API locked to joinsocialcode.com, comments API locked to app.joinsocialcode.com (H1)
-- [ ] **Add auth to file upload endpoint** — `/api/library/upload` has no admin check (H3)
-- [ ] **Fix forgot-password email lookup** — emails stored encrypted but queried raw so reset never works (H6)
-- [ ] **Add signed token to unsubscribe URL** — anyone can unsubscribe any email from Kit (H7)
-- [ ] **Sanitize blog content** — dangerouslySetInnerHTML with DB-sourced content, add DOMPurify (H4)
+- [x] **Add auth to file upload endpoint** — `/api/library/upload` protected via middleware (H3)
+- [x] **Fix forgot-password email lookup** — now fetches all portal clients and decrypts to find match (H6)
+- [x] **Add signed token to unsubscribe URL** — HMAC-signed token required; route validates before unsubscribing (H7)
+- [x] **Sanitize blog content** — sanitize() strips script/iframe/on*/javascript: from renderMarkdown output (H4)
 
 ## Security — MEDIUM
 - [ ] **Add input length/schema validation** with Zod on all API route request bodies (M2)
@@ -57,6 +57,6 @@
 ## Low
 - [x] Add twitter:site and twitter:creator meta tags
 - [x] Align title tag with H1 keyword — now "Social Code | Social Skills Coaching for Introverts"
-- [ ] Product schema URL points to Gumroad — ideally should point to your own domain page
+- [x] Product schema URL — updated from Gumroad to joinsocialcode.com
 - [x] Add Review schema for the 3 testimonials (Matthew A., Jeremy M., Mark W.)
 - [x] Add breadcrumb schema
