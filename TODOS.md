@@ -58,5 +58,5 @@
 - [x] Add twitter:site and twitter:creator meta tags
 - [x] Align title tag with H1 keyword — now "Social Code | Social Skills Coaching for Introverts"
 - [ ] Product schema URL points to Gumroad — ideally should point to your own domain page
-- [ ] Add Review schema for the 3 testimonials (Matthew A., Jeremy M., Mark W.)
-- [ ] Add breadcrumb schema
+- [x] Add Review schema for the 3 testimonials (Matthew A., Jeremy M., Mark W.)
+- [x] Add breadcrumb schema
