@@ -27,6 +27,29 @@
 ## App (social-code-app)
 - [ ] Handle `coaching-waitlist` in `/api/send-framework` — waitlist form submits but no email is sent. Needs a Kit tag + confirmation email wired up in the app.
 
+## Security — CRITICAL (do these first)
+- [ ] **Rotate all secrets** — Resend API key, Anthropic API key, Supabase service role key, ADMIN_TOKEN, ENCRYPTION_KEY, ADMIN_PASSWORD (do in each dashboard manually)
+- [ ] **Add auth guards to all unprotected API routes** — sessions, clients, leads, assessments GET, and all /api/generate-* routes are publicly accessible (C2)
+- [ ] **Add separate JWT_SECRET env var** — ADMIN_TOKEN is currently reused as the HMAC signing key for portal JWTs (C3)
+- [ ] **Hash admin password with bcrypt** — currently compared in plaintext (C4)
+- [ ] **Fix timing attack** — portal password compare uses `===` not `crypto.timingSafeEqual` (C5)
+- [ ] **Replace Math.random() with crypto.randomInt** in `app/lib/portalAuth.ts` temp password generation (C6)
+
+## Security — HIGH
+- [ ] **Add security headers** — no CSP, HSTS, X-Frame-Options, X-Content-Type-Options on either project (H5)
+- [ ] **Add rate limiting** — login brute-force, API cost abuse, subscriber spam all unprotected (H2)
+- [ ] **Fix CORS wildcard** on comments and posts API — change `*` to `https://app.joinsocialcode.com` (H1)
+- [ ] **Add auth to file upload endpoint** — `/api/library/upload` has no admin check (H3)
+- [ ] **Fix forgot-password email lookup** — emails stored encrypted but queried raw so reset never works (H6)
+- [ ] **Add signed token to unsubscribe URL** — anyone can unsubscribe any email from Kit (H7)
+- [ ] **Sanitize blog content** — dangerouslySetInnerHTML with DB-sourced content, add DOMPurify (H4)
+
+## Security — MEDIUM
+- [ ] **Add input length/schema validation** with Zod on all API route request bodies (M2)
+- [ ] **Wrap Anthropic errors** — raw error messages currently returned to client (M3)
+- [ ] **Shorten admin session cookie** — currently 30-day static token with no revocation (M6)
+- [ ] **Run npm audit** in social-code-app — dependency vulnerability status unknown (L4)
+
 ## Low
 - [x] Add twitter:site and twitter:creator meta tags
 - [x] Align title tag with H1 keyword — now "Social Code | Social Skills Coaching for Introverts"
