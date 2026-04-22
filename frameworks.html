@@ -51,25 +51,25 @@
         <a href="/" class="flex items-center gap-2">
           <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto" />
         </a>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden lg:flex items-center gap-8">
           <a href="/about" class="nav-link text-slate-400 text-sm font-medium">About</a>
           <a href="/frameworks" class="nav-link text-sm font-medium" style="color: #F7F9FC;">Frameworks</a>
           <a href="/manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
           <a href="/coaching" class="nav-link text-slate-400 text-sm font-medium">Coaching</a>
           <a href="/press" class="nav-link text-slate-400 text-sm font-medium">Press</a>
         </div>
-        <div class="hidden md:flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-3">
           <a href="/blog" class="nav-link text-slate-400 text-sm font-medium hover:text-white transition-colors">Blog</a>
           <a href="https://app.joinsocialcode.com/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
             FREE ASSESSMENT
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+        <button id="menu-btn" class="lg:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="flex-col gap-2 pb-4 md:hidden">
+      <div id="mobile-menu" class="flex-col gap-2 pb-4 lg:hidden">
         <a href="/about" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">About</a>
         <a href="/frameworks" class="block px-3 py-2.5 text-white text-sm font-medium" onclick="toggleMenu()">Frameworks</a>
         <a href="/manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
@@ -84,7 +84,7 @@
   <!-- PAGE HEADER -->
   <section class="pt-32 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <span class="badge">The Frameworks</span>
-    <h1 class="mt-5 text-5xl sm:text-6xl font-black leading-none tracking-tight">
+    <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black leading-none tracking-tight">
       12 frameworks.<br/><span class="text-gradient">Zero fluff.</span>
     </h1>
     <p class="mt-5 text-slate-400 text-lg max-w-xl" style="font-family: 'Work Sans', sans-serif;">
@@ -166,16 +166,16 @@
       <div class="rounded-2xl px-5 py-2 mb-1">
         <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Initiation</p>
       </div>
-      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">SPARK</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Starting Conversations</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
-      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">3-Second Social Scan</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Reading Whether Someone Wants to Be Approached</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">SPARK</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Starting Conversations</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;white-space:nowrap;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">3-Second Social Scan</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Reading Whether Someone Wants to Be Approached</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;white-space:nowrap;">Free Bundle</span></div></div>
 
-      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">3-2-1 Send It</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Stopping Overthinking and Pulling the Trigger</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
-      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">Barista Method</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Building Social Reps in Zero-Stakes Environments</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">3-2-1 Send It</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Stopping Overthinking and Pulling the Trigger</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;white-space:nowrap;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Barista Method</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Building Social Reps in Zero-Stakes Environments</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;white-space:nowrap;">Free Bundle</span></div></div>
 
       <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
         <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Delivery &amp; Presence</p>
       </div>
-      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">TALK Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Delivery Layer for Any Interaction</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">TALK Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Delivery Layer for Any Interaction</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;white-space:nowrap;">Free Bundle</span></div></div>
 
       <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
         <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Depth &amp; Continuity</p>
@@ -207,7 +207,7 @@
       <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
         <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Recovery &amp; Reset</p>
       </div>
-      <div class="rounded-xl p-4 border" style="background: #131E2B; border-color: rgba(255,107,107,0.2);"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">Stop Replaying <span class="text-xs font-normal text-slate-500 ml-1">— E-Book &amp; Workbook</span></p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Breaking the Post-Social Overthink Loop</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(255,107,107,0.12);color:#FF6B6B;">$17 Product</span></div></div>
+      <div class="rounded-xl p-4 border" style="background: #131E2B; border-color: rgba(255,107,107,0.2);"><div class="flex items-center justify-between"><div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Stop Replaying <span class="text-xs font-normal text-slate-500 ml-1">— E-Book &amp; Workbook</span></p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Breaking the Post-Social Overthink Loop</p></div><span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(255,107,107,0.12);color:#FF6B6B;white-space:nowrap;">$17 Product</span></div></div>
 
     </div>
 

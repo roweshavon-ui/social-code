@@ -322,14 +322,14 @@
         <a href="#" class="flex items-center gap-2 group">
           <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto" />
         </a>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden lg:flex items-center gap-8">
           <a href="/about" class="nav-link text-slate-400 text-sm font-medium">About</a>
           <a href="/frameworks" class="nav-link text-slate-400 text-sm font-medium">Frameworks</a>
           <a href="/manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
           <a href="/coaching" class="nav-link text-slate-400 text-sm font-medium">Coaching</a>
           <a href="/press" class="nav-link text-slate-400 text-sm font-medium">Press</a>
         </div>
-        <div class="hidden md:flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-3">
           <a href="/blog" class="nav-link text-slate-400 text-sm font-medium hover:text-white transition-colors">Blog</a>
           <a href="https://app.joinsocialcode.com/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
             FREE ASSESSMENT
@@ -338,13 +338,13 @@
             </svg>
           </a>
         </div>
-        <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+        <button id="menu-btn" class="lg:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
-      <div id="mobile-menu" class="flex-col gap-2 pb-4 md:hidden">
+      <div id="mobile-menu" class="flex-col gap-2 pb-4 lg:hidden">
         <a href="/about" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">About</a>
         <a href="/frameworks" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Frameworks</a>
         <a href="/manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
@@ -371,7 +371,7 @@
       </div>
 
       <div class="fade-up">
-        <span class="badge">Jungian Psychology + Systematic Frameworks · Built by an introvert. For introverts.</span>
+        <span class="badge">Built by an introvert. For introverts.</span>
       </div>
 
       <h1 class="fade-up-d1 mt-8 text-5xl sm:text-6xl lg:text-7xl font-black leading-none tracking-tight">
@@ -403,17 +403,17 @@
       </div>
 
       <!-- Stats -->
-      <div class="fade-up-d4 mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+      <div class="fade-up-d4 mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto">
         <div class="text-center">
-          <div class="text-4xl font-black text-gradient">10k+</div>
+          <div class="text-2xl sm:text-4xl font-black text-gradient">10k+</div>
           <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Doors knocked</div>
         </div>
         <div class="text-center border-x border-slate-800">
-          <div class="text-4xl font-black text-gradient">12</div>
+          <div class="text-2xl sm:text-4xl font-black text-gradient">12</div>
           <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Frameworks</div>
         </div>
         <div class="text-center">
-          <div class="text-4xl font-black text-gradient">0</div>
+          <div class="text-2xl sm:text-4xl font-black text-gradient">0</div>
           <div class="mt-2 text-xs text-slate-500 font-medium uppercase tracking-wider" style="font-family: 'Work Sans', sans-serif;">Bullshit advice</div>
         </div>
       </div>
@@ -560,69 +560,69 @@
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-3 pb-2" style="color: #00D9C0;">Initiation — <span class="normal-case font-medium text-slate-500">delivered via the Fearless Approach System (FAS) guide</span></p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">SPARK</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Starting Conversations</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">SPARK</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Starting Conversations</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold flex-shrink-0 ml-2" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
         </div>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">3-Second Social Scan</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Reading Whether Someone Wants to Be Approached</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">3-Second Social Scan</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Reading Whether Someone Wants to Be Approached</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold flex-shrink-0 ml-2" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
         </div>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">3-2-1 Send It</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Stopping Overthinking and Pulling the Trigger</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">3-2-1 Send It</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Stopping Overthinking and Pulling the Trigger</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold flex-shrink-0 ml-2" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
         </div>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">Barista Method</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Building Social Reps in Zero-Stakes Environments</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Barista Method</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Building Social Reps in Zero-Stakes Environments</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold flex-shrink-0 ml-2" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Delivery &amp; Presence</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">TALK Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Delivery Layer for Any Interaction</p></div>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">TALK Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Delivery Layer for Any Interaction</p></div>
           <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Depth &amp; Continuity</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">DEPTH</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Taking Conversations from Surface to Real</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">DEPTH</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Taking Conversations from Surface to Real</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Confidence &amp; Inner Game</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">GROUND</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Confidence and Inner Game</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">GROUND</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Confidence and Inner Game</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">Pre-Game System</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Confidence Preparation Before Any Social Situation</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Pre-Game System</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Confidence Preparation Before Any Social Situation</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">Energy Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Energy Management and Strategic Engagement</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Energy Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Energy Management and Strategic Engagement</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Speaking Up &amp; Group Dynamics</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">VOICE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Speaking Up in Groups and Claiming Your Space</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">VOICE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Speaking Up in Groups and Claiming Your Space</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Difficult Conversations</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">BRAVE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Navigating Difficult Conversations</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">BRAVE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Navigating Difficult Conversations</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Difficult People</p>
         <div class="rounded-xl px-5 py-3.5 border border-white/5 flex items-center justify-between" style="background: #131E2B;">
-          <div><p class="text-sm font-bold text-white">SHIELD</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Handling Difficult People and Energy Drains</p></div>
-          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600" style="background:rgba(255,255,255,0.04);">🔒 Locked</span>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">SHIELD</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Handling Difficult People and Energy Drains</p></div>
+          <span class="text-xs px-2.5 py-1 rounded-full font-semibold text-slate-600 flex-shrink-0 ml-2" style="background:rgba(255,255,255,0.04);">🔒</span>
         </div>
 
         <p class="text-xs font-bold tracking-widest uppercase px-1 pt-6 pb-2" style="color: #00D9C0;">Recovery &amp; Reset</p>
         <div class="rounded-xl px-5 py-3.5 border flex items-center justify-between" style="background: #131E2B; border-color: rgba(255,107,107,0.2);">
-          <div><p class="text-sm font-bold text-white">Stop Replaying <span class="text-xs font-normal text-slate-500 ml-1">— E-Book &amp; Workbook</span></p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Breaking the Post-Social Overthink Loop</p></div>
+          <div class="min-w-0 flex-1"><p class="text-sm font-bold text-white">Stop Replaying <span class="text-xs font-normal text-slate-500 ml-1">— E-Book &amp; Workbook</span></p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Breaking the Post-Social Overthink Loop</p></div>
           <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(255,107,107,0.12);color:#FF6B6B;">$17 Product</span>
         </div>
 
