@@ -279,13 +279,12 @@
           <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto" />
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="#about" class="nav-link text-slate-400 text-sm font-medium">About</a>
-          <a href="#origin" class="nav-link text-slate-400 text-sm font-medium">Origin</a>
-          <a href="#frameworks" class="nav-link text-slate-400 text-sm font-medium">Frameworks</a>
-          <a href="#manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
+          <a href="/about" class="nav-link text-slate-400 text-sm font-medium">About</a>
+          <a href="/frameworks" class="nav-link text-slate-400 text-sm font-medium">Frameworks</a>
+          <a href="/manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
+          <a href="/coaching" class="nav-link text-slate-400 text-sm font-medium">Coaching</a>
         </div>
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://app.joinsocialcode.com/practice" class="nav-link text-slate-400 text-sm font-medium hover:text-white transition-colors">Simulator</a>
           <a href="https://app.joinsocialcode.com/blog" class="nav-link text-slate-400 text-sm font-medium hover:text-white transition-colors">Blog</a>
           <a href="https://app.joinsocialcode.com/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
             FREE ASSESSMENT
@@ -301,11 +300,10 @@
         </button>
       </div>
       <div id="mobile-menu" class="flex-col gap-2 pb-4 md:hidden">
-        <a href="#about" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">About</a>
-        <a href="#origin" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Origin</a>
-        <a href="#frameworks" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Frameworks</a>
-        <a href="#manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
-        <a href="https://app.joinsocialcode.com/practice" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Simulator</a>
+        <a href="/about" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">About</a>
+        <a href="/frameworks" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Frameworks</a>
+        <a href="/manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
+        <a href="/coaching" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Coaching</a>
         <a href="https://app.joinsocialcode.com/blog" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Blog</a>
         <a href="https://app.joinsocialcode.com/assess" class="mt-2 block text-center px-5 py-3 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;" onclick="toggleMenu()">FREE ASSESSMENT</a>
       </div>
@@ -379,332 +377,6 @@
   </section>
 
 
-  <div class="divider"></div>
-
-
-  <!-- ABOUT ME -->
-  <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <!-- Photo -->
-      <div class="flex justify-center lg:justify-end order-first lg:order-last">
-        <div class="relative">
-          <div class="w-72 h-80 sm:w-80 sm:h-96 rounded-3xl overflow-hidden" style="border: 1px solid rgba(0,217,192,0.15); box-shadow: 0 0 60px rgba(0,217,192,0.08);">
-            <img
-              src="shavi.jpg"
-              alt="Shavi Anthony — Founder of Social Code"
-              width="320"
-              height="384"
-              class="w-full h-full object-cover"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div style="display:none; background:#131E2B; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; gap:8px;">
-              <span style="font-size:48px;">📸</span>
-              <span style="color:#334155; font-size:13px; font-family:'Work Sans',sans-serif;">Add shavi.jpg to /social-code/</span>
-            </div>
-          </div>
-          <!-- Accent -->
-          <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl flex items-center justify-center" style="background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.2); backdrop-filter: blur(8px);">
-            <span class="text-xs font-bold text-center leading-tight px-2" style="color: #FF6B6B;">Still<br/>weird.</span>
-          </div>
-          <div class="absolute -top-4 -right-4 w-24 h-24 rounded-2xl flex items-center justify-center" style="background: rgba(0,217,192,0.08); border: 1px solid rgba(0,217,192,0.2); backdrop-filter: blur(8px);">
-            <span class="text-xs font-bold text-center leading-tight px-2" style="color: #00D9C0;">Just<br/>competent.</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text -->
-      <div>
-        <span class="badge">About Me</span>
-        <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
-          Hi, I'm <span class="text-gradient">Shavi.</span>
-        </h2>
-        <div class="mt-6 space-y-4 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-          <p>
-            There's a specific kind of loneliness that nobody talks about. Not the kind where you have nobody around. The kind where you're surrounded by people and still feel completely invisible. You watch everyone else move through rooms like they got a manual you never received. Conversations flow for them. Connections happen naturally. And you go home wondering what's wrong with you.
-          </p>
-          <p>
-            I know that feeling well. I spent years inside it.
-          </p>
-          <p>
-            The thing nobody told me, the thing I had to figure out the long way, is that nothing was wrong with me. What I was experiencing had a name. Carl Jung, the psychologist who first defined introversion, described it simply as drawing your energy from within rather than from the world around you. That's it. A way of processing. An orientation. <strong class="text-white font-semibold">Not a flaw.</strong>
-          </p>
-          <p>
-            But somewhere along the way culture turned introversion into a diagnosis. A reason you're bad at parties. A personality type that comes pre-packaged with social failure. They gave you a label and left you with nothing else.
-          </p>
-          <p>
-            That's the part I'm here to dismantle.
-          </p>
-          <p>
-            Because the real problem was never who you are. It was that nobody ever sat you down and taught you the actual mechanics of human connection. The frameworks. The systems. How conversation actually works. How people actually operate.
-          </p>
-          <p class="text-white font-medium">
-            We're the introverts who got tired of being lonely. The socially anxious who learned systems instead of waiting for confidence that never came.
-          </p>
-        </div>
-        <div class="mt-8">
-          <p class="text-lg font-bold text-white">Shavi, Founder</p>
-          <p class="text-sm text-slate-500 mt-0.5" style="font-family: 'Work Sans', sans-serif;">@GetSocialCode</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <div class="divider"></div>
-
-
-  <!-- ORIGIN -->
-  <section id="origin" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <div>
-        <span class="badge">The Origin</span>
-        <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
-          This wasn't built in a<br/>
-          <span class="text-coral">classroom.</span>
-        </h2>
-        <div class="mt-6 space-y-4 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-          <p>
-            I moved somewhere new knowing absolutely nobody. No network. No safety net. People meant well when they told me to just be confident, just put myself out there, just be myself. I tried that. It didn't work. Because confidence without skill is just wishful thinking, and being yourself only helps if you already know how to connect.
-          </p>
-          <p>
-            Eventually I ended up in door-to-door sales. Pest control, solar, fiber optic. Not because I had a plan. Because I needed money and it was the only thing available. I genuinely hated every second of it at first. Every knock felt like volunteering for rejection.
-          </p>
-          <p>
-            But I kept going. <strong class="text-white font-semibold">Over 10,000 doors.</strong> Over 10,000 moments where I had about five seconds to make something work before someone decided to listen or walk away. There was no room for theory out there. No time to think about what you should have said on the drive home. You learned or you failed, over and over, until the learning started to stick.
-          </p>
-          <p>
-            Somewhere in the middle of all that I found Carl Jung's work on psychological development. And something clicked. What I had been doing without realizing it had a name. Individuation. Facing the parts of yourself you've spent your whole life avoiding, through direct controlled exposure to the exact situations that frighten you most. I wasn't learning tricks. I was finishing developmental work that most people never start.
-          </p>
-          <p>
-            I came out of it a different person in the ways that actually matter. Still introverted. Still someone who needs quiet to recharge. But no longer helpless in a room full of people. No longer replaying every conversation for hours afterward wondering what went wrong.
-          </p>
-          <p class="text-white font-medium">
-            Social Code is the systematic version of everything I built through that process. Every framework, every mechanic, every insight I had to earn the hard way. So you don't have to start from scratch the way I did.
-          </p>
-        </div>
-        <div class="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-xl" style="background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.15);">
-          <span class="text-sm font-bold" style="color: #FF6B6B;">Still awkward. Still weird. Just competent.</span>
-        </div>
-      </div>
-
-      <!-- Visual -->
-      <div class="space-y-4">
-        <div class="rounded-2xl p-6 border border-white/5" style="background: #131E2B;">
-          <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">The Problem With Other Advice</div>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3">
-              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
-              <span class="text-sm text-slate-400">"Just be confident." Cool. How?</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
-              <span class="text-sm text-slate-400">"Be yourself." If that worked, you wouldn't be here.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
-              <span class="text-sm text-slate-400">"Work the room." Built by extroverts, for extroverts.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-coral mt-0.5 flex-shrink-0">✗</span>
-              <span class="text-sm text-slate-400">"Visualize success." You need mechanics, not affirmations.</span>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-2xl p-6 border glow-teal" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
-          <div class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: #00D9C0;">The Social Code Difference</div>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3">
-              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
-              <span class="text-sm text-slate-300">Jungian psychology. Not pop psychology platitudes.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
-              <span class="text-sm text-slate-300">Systematic frameworks you can study and repeat.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
-              <span class="text-sm text-slate-300">Built for introverts. Accounts for your energy.</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <span style="color: #00D9C0;" class="mt-0.5 flex-shrink-0">✓</span>
-              <span class="text-sm text-slate-300">Fewer conversations, more depth. Quality over quantity.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <div class="divider"></div>
-
-
-  <!-- FRAMEWORKS -->
-  <section id="frameworks" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div class="text-center mb-16">
-      <span class="badge">The Frameworks</span>
-      <h2 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight leading-tight">
-        14 frameworks.<br/>
-        <span class="text-gradient">Zero fluff.</span>
-      </h2>
-      <p class="mt-5 text-slate-400 text-lg max-w-xl mx-auto" style="font-family: 'Work Sans', sans-serif;">
-        Each framework is a distilled, repeatable system. Study it. Practice it. Use it.
-      </p>
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-6">
-
-      <!-- Free Bundle — FAS + TALK Check (spans 2 columns on lg) -->
-      <article class="framework-card lg:col-span-2 rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
-        <div class="flex flex-col md:flex-row md:gap-10">
-          <!-- FAS details -->
-          <div class="flex-1 mb-6 md:mb-0">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(77,232,212,0.1); color: #4DE8D4;">FA</div>
-              <span class="text-xs px-2.5 py-1 rounded-full font-semibold md:hidden" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle</span>
-            </div>
-            <h3 class="text-base font-bold text-white">Fearless Approach System</h3>
-            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #4DE8D4;">Overcoming Approach Anxiety</p>
-            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-              The full architecture for approaching anyone — when to go, how to go, what to say. Includes SPARK and the 3-Second Scan.
-            </p>
-          </div>
-          <!-- divider -->
-          <div class="hidden md:block w-px bg-white/5 self-stretch"></div>
-          <!-- TALK Check details -->
-          <div class="flex-1">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(0,217,192,0.12); color: #00D9C0;">TC</div>
-            </div>
-            <h3 class="text-base font-bold text-white">TALK Check</h3>
-            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #00D9C0;">Tone · Attention · Language · Kinetics</p>
-            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-              The 10-second delivery layer you run before every conversation. Start here — fastest to use in the real world.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-6 pt-6 border-t border-white/5">
-          <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle — Both PDFs in one email</span>
-            <span class="text-xs text-slate-500" style="font-family: 'Work Sans', sans-serif;">Start with TALK Check, then FAS</span>
-          </div>
-          <div class="fw-email-form" data-framework="fearless-approach" data-color="#00D9C0">
-            <button class="fw-trigger w-full py-3 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #00D9C0; color: #080F18;">
-              Get Both Free Frameworks →
-            </button>
-            <div class="fw-input-row hidden mt-3 space-y-2">
-              <input type="text" placeholder="Your first name" class="fw-name w-full px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
-              <div class="flex gap-2">
-                <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
-                <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #00D9C0; color: #080F18;">Send</button>
-              </div>
-              <p class="text-xs text-slate-600" style="font-family: 'Work Sans', sans-serif;">By submitting, you agree to receive emails from Social Code. Unsubscribe anytime.</p>
-            </div>
-            <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #00D9C0;"></p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stop Replaying -->
-      <article class="framework-card rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(255,107,107,0.25);">
-        <div>
-          <div class="flex items-start justify-between mb-5">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">SR</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">$17</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Stop Replaying</h3>
-          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #FF6B6B;">End the 2 AM Overthink Loop</p>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
-            For introverts who replay every conversation for days. Turn 3 days of rumination into 10 minutes of processing. The Conversation Audit, Redirect Protocol, and Pre-Game System.
-          </p>
-          <div class="space-y-2 mb-5">
-            <div class="flex items-center gap-2 text-xs text-slate-400">
-              <span style="color: #FF6B6B;">✓</span> E-Book — the full framework
-            </div>
-            <div class="flex items-center gap-2 text-xs text-slate-400">
-              <span style="color: #FF6B6B;">✓</span> 30-Day Implementation Workbook included
-            </div>
-          </div>
-        </div>
-        <div class="mt-auto">
-          <a href="https://8864150412757.gumroad.com/l/obzgfd" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl text-sm font-bold text-center transition-all hover:opacity-90" style="background: #FF6B6B; color: white;">
-            Get the Complete System — $17 →
-          </a>
-          <p class="text-xs text-slate-600 text-center mt-2" style="font-family: 'Work Sans', sans-serif;">Instant download · E-Book + Workbook</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <script>
-    document.querySelectorAll('.fw-email-form').forEach(function(form) {
-      var trigger = form.querySelector('.fw-trigger');
-      var inputRow = form.querySelector('.fw-input-row');
-      var nameInput = form.querySelector('.fw-name');
-      var emailInput = form.querySelector('.fw-email');
-      var sendBtn = form.querySelector('.fw-send');
-      var msg = form.querySelector('.fw-msg');
-      var framework = form.dataset.framework;
-      var color = form.dataset.color;
-
-      trigger.addEventListener('click', function() {
-        trigger.classList.add('hidden');
-        inputRow.classList.remove('hidden');
-        nameInput.focus();
-      });
-
-      sendBtn.addEventListener('click', function() {
-        var email = emailInput.value.trim();
-        var name = nameInput.value.trim();
-        if (!email) return;
-
-        sendBtn.textContent = 'Sending...';
-        sendBtn.disabled = true;
-
-        fetch('https://app.joinsocialcode.com/api/send-framework', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, name: name, framework: framework })
-        })
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          inputRow.classList.add('hidden');
-          msg.classList.remove('hidden');
-          if (data.success) {
-            msg.textContent = 'Check your inbox — both PDFs are on their way. Start with TALK Check.';
-            msg.style.color = color;
-          } else {
-            msg.textContent = data.error || 'Something went wrong. Try again.';
-            msg.style.color = '#FF6B6B';
-          }
-        })
-        .catch(function() {
-          inputRow.classList.add('hidden');
-          msg.classList.remove('hidden');
-          msg.textContent = 'Something went wrong. Try again.';
-          msg.style.color = '#FF6B6B';
-        });
-      });
-
-      emailInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') sendBtn.click();
-      });
-      nameInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') emailInput.focus();
-      });
-    });
-  </script>
-
-
-  <div class="divider"></div>
-
 
   <!-- OUTCOMES -->
   <section class="py-24 reveal" style="background: #0D1825;">
@@ -770,113 +442,6 @@
   </section>
 
 
-  <div class="divider"></div>
-
-
-  <!-- MANIFESTO -->
-  <section id="manifesto" class="py-24" style="background: #101B28;">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-14">
-        <span class="badge">The Manifesto</span>
-        <h2 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight">
-          Who we are.<br/>
-          <span class="text-gradient">Who we're not.</span>
-        </h2>
-      </div>
-
-      <div class="space-y-8">
-
-        <div>
-          <p class="text-slate-300 leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">
-            We're not for everyone. That's the point.
-          </p>
-          <p class="text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-            There's an entire industry built around keeping you stuck. They dress it up nicely, slap an inspirational quote on it, and sell it back to you as growth. It isn't. And if you've been around long enough, you already feel it.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-lg font-bold mb-4" style="color: #FF6B6B;">WHO WE'RE AGAINST</h3>
-
-          <div class="space-y-5">
-            <div class="p-5 rounded-xl" style="background: #131E2B;">
-              <h4 class="text-sm font-bold text-white mb-2">The Confidence Cult</h4>
-              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-                Told you to believe in yourself. To visualize success. To just be confident. You tried that. It didn't work. Because they never told you how. That wasn't an accident. If they gave you actual systems, you wouldn't need them anymore. They keep you dependent. We make you competent.
-              </p>
-            </div>
-            <div class="p-5 rounded-xl" style="background: #131E2B;">
-              <h4 class="text-sm font-bold text-white mb-2">The "Be Yourself" Crowd</h4>
-              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-                Sounds like acceptance. Sounds like someone finally giving you permission to stop pretending. What it actually does is tell an underdeveloped person to stay exactly where they are and call it self-love. Carl Jung spent his entire career explaining that becoming yourself is the work of a lifetime. It doesn't happen by default. It happens through deliberate development. "Be yourself" is good advice for someone who's already done that work. For everyone else, it's a ceiling disguised as a gift.
-              </p>
-            </div>
-            <div class="p-5 rounded-xl" style="background: #131E2B;">
-              <h4 class="text-sm font-bold text-white mb-2">The Politeness Police</h4>
-              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-                Told you to be nice, keep the peace, never make things uncomfortable. And quietly, without you noticing, that advice made you socially weak. You stopped setting real boundaries because you were too afraid of the reaction. You avoided every difficult conversation until you were living a version of your relationships that wasn't honest. Real connection requires the ability to disagree. To call something out. To hold your ground. Nobody teaches you that part.
-              </p>
-            </div>
-            <div class="p-5 rounded-xl" style="background: #131E2B;">
-              <h4 class="text-sm font-bold text-white mb-2">The Therapy-Speak Crowd</h4>
-              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-                Told you your anxiety is valid, you're perfect as you are, healing takes time. That's true. It's also incomplete. Validation without direction is just comfortable stagnation. You can acknowledge what you carry and still refuse to let it be your ceiling. Sitting in your room validating your feelings while opportunities pass you by is not healing. It's hiding with better language.
-              </p>
-            </div>
-            <div class="p-5 rounded-xl" style="background: #131E2B;">
-              <h4 class="text-sm font-bold text-white mb-2">The Networking Industrial Complex</h4>
-              <p class="text-sm text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-                Taught you to collect contacts and fake enthusiasm at events you didn't want to attend. Never taught you how to actually read a room, start a real conversation, or make someone feel like you were the most genuine person they met all year. They teach you to perform connection. We teach you to build it.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <p class="text-slate-400 leading-relaxed mb-6" style="font-family: 'Work Sans', sans-serif;">
-            We're not against any of these people personally. We're against what they cost you. The years you spent waiting to feel ready. The connections that never deepened. The version of yourself that kept shrinking to fit advice that was never built for you.
-          </p>
-          <p class="text-white font-semibold">We're done with all of it. That's why we're here.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div class="p-6 rounded-2xl" style="background: #131E2B; border: 1px solid rgba(255,107,107,0.12);">
-            <h4 class="text-sm font-bold mb-4" style="color: #FF6B6B;">THE PROBLEM WITH OTHER ADVICE</h4>
-            <ul class="space-y-3" style="font-family: 'Work Sans', sans-serif;">
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #FF6B6B;">✗</span> "Just be confident." Cool. How?</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #FF6B6B;">✗</span> "Be yourself." If that worked, you wouldn't be here.</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #FF6B6B;">✗</span> "Work the room." Built by extroverts, for extroverts.</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #FF6B6B;">✗</span> "Visualize success." You need mechanics, not affirmations.</li>
-
-            </ul>
-          </div>
-          <div class="p-6 rounded-2xl" style="background: #131E2B; border: 1px solid rgba(0,217,192,0.12);">
-            <h4 class="text-sm font-bold mb-4" style="color: #00D9C0;">THE SOCIAL CODE DIFFERENCE</h4>
-            <ul class="space-y-3" style="font-family: 'Work Sans', sans-serif;">
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #00D9C0;">✓</span> Jungian psychology. Not pop psychology platitudes.</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #00D9C0;">✓</span> Systematic frameworks you can study and repeat.</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #00D9C0;">✓</span> Built for introverts. Accounts for your energy.</li>
-              <li class="text-sm text-slate-400"><span class="font-bold" style="color: #00D9C0;">✓</span> Fewer conversations, more depth. Quality over quantity.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center glow-teal" style="background: #131E2B; border: 1px solid rgba(0,217,192,0.15);">
-          <blockquote class="text-2xl sm:text-3xl font-black text-white leading-tight">
-            "Until you make the unconscious conscious,<br/>
-            it will direct your life,<br/>
-            and you will call it fate."
-          </blockquote>
-          <p class="mt-4 text-sm font-medium" style="color: #00D9C0;">— Carl Jung</p>
-          <p class="mt-3 text-sm text-slate-500" style="font-family: 'Work Sans', sans-serif;">Social Code is that process applied to social engagement. You're not performing — you're consciously developing.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
   <!-- Testimonials -->
   <section class="py-24 reveal" style="background: #0D1825;">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
@@ -930,120 +495,6 @@
   </section>
 
 
-  <div class="divider"></div>
-
-
-  <!-- 1:1 COACHING WAITLIST -->
-  <section class="py-24 reveal" style="background: #0D1825;">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="rounded-3xl p-10 sm:p-14" style="background: #131E2B; border: 1px solid rgba(255,107,107,0.2); box-shadow: 0 0 60px rgba(255,107,107,0.06);">
-
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-          <!-- Left — offer details -->
-          <div>
-            <span class="badge" style="background: rgba(255,107,107,0.1); border-color: rgba(255,107,107,0.25); color: #FF6B6B;">1:1 Coaching — Waitlist Open</span>
-            <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
-              Work with<br/><span class="text-coral">Shavi directly.</span>
-            </h2>
-            <p class="mt-5 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
-              8 private sessions. One framework per session. Built around your specific patterns, your specific situations, your specific sticking points.
-            </p>
-            <ul class="mt-6 space-y-3">
-              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
-                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
-                8 sessions — one per framework, in order
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
-                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
-                Real-world practice assignments between sessions
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
-                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
-                Direct feedback on your specific situations
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
-                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
-                Access to the full 14-framework library
-              </li>
-            </ul>
-            <div class="mt-8 inline-flex items-baseline gap-2">
-              <span class="text-4xl font-black text-white">$2,000</span>
-              <span class="text-slate-500 text-sm" style="font-family: 'Work Sans', sans-serif;">/ 8 sessions · payment plans available</span>
-            </div>
-          </div>
-
-          <!-- Right — waitlist form -->
-          <div>
-            <div class="rounded-2xl p-7" style="background: #0D1825; border: 1px solid rgba(255,255,255,0.06);">
-              <p class="text-sm font-bold text-white mb-1">Join the waitlist</p>
-              <p class="text-xs text-slate-500 mb-6" style="font-family: 'Work Sans', sans-serif;">Spots are limited. You'll get first access when a slot opens.</p>
-
-              <div id="coaching-form" class="space-y-3">
-                <input
-                  id="coaching-name"
-                  type="text"
-                  placeholder="Your first name"
-                  class="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none focus:border-coral transition-colors"
-                  style="background: #131E2B;"
-                />
-                <input
-                  id="coaching-email"
-                  type="email"
-                  placeholder="your@email.com"
-                  class="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none focus:border-coral transition-colors"
-                  style="background: #131E2B;"
-                />
-                <button
-                  id="coaching-btn"
-                  onclick="joinCoachingWaitlist()"
-                  class="btn-primary w-full py-3.5 rounded-xl text-sm font-bold text-white"
-                  style="background: #FF6B6B;"
-                >
-                  Join the Waitlist
-                </button>
-                <p class="text-xs text-slate-600 text-center" style="font-family: 'Work Sans', sans-serif;">No spam. Just a heads-up when a spot opens.</p>
-              </div>
-              <p id="coaching-msg" class="hidden text-sm text-center font-medium mt-4" style="color: #00D9C0;"></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    async function joinCoachingWaitlist() {
-      const name = document.getElementById('coaching-name').value.trim();
-      const email = document.getElementById('coaching-email').value.trim();
-      const btn = document.getElementById('coaching-btn');
-      const msg = document.getElementById('coaching-msg');
-
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        document.getElementById('coaching-email').style.borderColor = 'rgba(255,107,107,0.5)';
-        return;
-      }
-      document.getElementById('coaching-email').style.borderColor = '';
-
-      btn.disabled = true;
-      btn.textContent = 'Joining...';
-
-      try {
-        await fetch('https://app.joinsocialcode.com/api/send-framework', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, name, framework: 'coaching-waitlist' }),
-        });
-      } catch (_) {}
-
-      document.getElementById('coaching-form').classList.add('hidden');
-      msg.classList.remove('hidden');
-      msg.textContent = "You're on the list. I'll reach out personally when a spot opens.";
-    }
-  </script>
-
 
   <!-- LATEST POSTS -->
   <section class="py-24 reveal" style="background: #101B28;">
@@ -1057,6 +508,14 @@
       </div>
       <div id="latest-posts" class="grid sm:grid-cols-3 gap-5">
         <!-- POSTS_START -->
+        <a href="https://app.joinsocialcode.com/blog/why-introverts-are-better-at-deep-conversations"
+          class="group rounded-2xl border p-6 flex flex-col transition-all"
+          style="background:#131E2B; border-color:rgba(255,255,255,0.06); text-decoration:none;">
+          <p style="font-size:11px; color:#475569; margin-bottom:12px;">April 21, 2026</p>
+          <h3 style="font-size:15px; font-weight:800; color:#F7F9FC; line-height:1.35; margin-bottom:10px;">Why introverts are actually better at deep conversations (and how to stop wasting that gift)</h3>
+          <p style="font-size:13px; color:#94a3b8; line-height:1.65; flex:1; font-family:'Work Sans',sans-serif; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">Everyone told you to talk more. Nobody told you that what you're already doing is the thing most people can't pull off. Here's how to stop apologizing for it and start using it.</p>
+          <p style="font-size:12px; font-weight:700; color:#00D9C0; margin-top:16px;">Read →</p>
+        </a>
         <a href="https://app.joinsocialcode.com/blog/social-anxiety-vs-social-incompetence"
           class="group rounded-2xl border p-6 flex flex-col transition-all"
           style="background:#131E2B; border-color:rgba(255,255,255,0.06); text-decoration:none;">
@@ -1071,14 +530,6 @@
           <p style="font-size:11px; color:#475569; margin-bottom:12px;">March 31, 2026</p>
           <h3 style="font-size:15px; font-weight:800; color:#F7F9FC; line-height:1.35; margin-bottom:10px;">How to Start a Conversation as an Introvert (Without Faking It)</h3>
           <p style="font-size:13px; color:#94a3b8; line-height:1.65; flex:1; font-family:'Work Sans',sans-serif; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">“Just be yourself” is the worst advice ever given to an introvert. Here’s what actually works.</p>
-          <p style="font-size:12px; font-weight:700; color:#00D9C0; margin-top:16px;">Read →</p>
-        </a>
-        <a href="https://app.joinsocialcode.com/blog/-you-dont-have-a-confidence-problem"
-          class="group rounded-2xl border p-6 flex flex-col transition-all"
-          style="background:#131E2B; border-color:rgba(255,255,255,0.06); text-decoration:none;">
-          <p style="font-size:11px; color:#475569; margin-bottom:12px;">March 12, 2026</p>
-          <h3 style="font-size:15px; font-weight:800; color:#F7F9FC; line-height:1.35; margin-bottom:10px;">You Don't Have a Confidence Problem</h3>
-          <p style="font-size:13px; color:#94a3b8; line-height:1.65; flex:1; font-family:'Work Sans',sans-serif; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">Everyone tells introverts to &quot;just be confident.&quot; Nobody explains how. The problem isn't your mindset, it's that nobody ever taught you the actual, mechanics of how conversation works.</p>
           <p style="font-size:12px; font-weight:700; color:#00D9C0; margin-top:16px;">Read →</p>
         </a>
         <!-- POSTS_END -->
@@ -1247,9 +698,10 @@
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
         <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto opacity-75" />
         <nav class="flex items-center gap-6">
-          <a href="#origin" class="nav-link text-xs text-slate-600 hover:text-slate-400">Origin</a>
-          <a href="#frameworks" class="nav-link text-xs text-slate-600 hover:text-slate-400">Frameworks</a>
-          <a href="#manifesto" class="nav-link text-xs text-slate-600 hover:text-slate-400">Manifesto</a>
+          <a href="/about" class="nav-link text-xs text-slate-600 hover:text-slate-400">About</a>
+          <a href="/frameworks" class="nav-link text-xs text-slate-600 hover:text-slate-400">Frameworks</a>
+          <a href="/manifesto" class="nav-link text-xs text-slate-600 hover:text-slate-400">Manifesto</a>
+          <a href="/coaching" class="nav-link text-xs text-slate-600 hover:text-slate-400">Coaching</a>
         </nav>
         <!-- Social icons -->
         <div class="flex items-center gap-4">

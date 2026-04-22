@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frameworks — Social Code</title>
+  <meta name="description" content="14 social skills frameworks for introverts. Start with TALK Check and the Fearless Approach System — free. Then Stop Replaying for $17." />
+  <link rel="canonical" href="https://joinsocialcode.com/frameworks" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; background-color: #0D1825; color: #F7F9FC; overflow-x: hidden; }
+    .text-gradient { background: linear-gradient(135deg, #00D9C0 0%, #00A896 50%, #4DE8D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .text-coral { color: #FF6B6B; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; background: rgba(0,217,192,0.1); border: 1px solid rgba(0,217,192,0.25); color: #00D9C0; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,217,192,0.12), transparent); }
+    .btn-primary { transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease; cursor: pointer; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,107,107,0.4); background-color: #E55E5E; }
+    .nav-link { transition: color 150ms ease; }
+    .nav-link:hover { color: #00D9C0; }
+    .framework-card { transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
+    .framework-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,217,192,0.12); border-color: rgba(0,217,192,0.35); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #00D9C0; outline-offset: 3px; border-radius: 4px; }
+    @keyframes glowPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,107,0); } 50% { box-shadow: 0 0 20px 6px rgba(255,107,107,0.35); } }
+    .glow-pulse { animation: glowPulse 2.8s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50" style="backdrop-filter: blur(16px); background: rgba(13,24,37,0.85); border-bottom: 1px solid rgba(0,217,192,0.08);">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto" />
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/about" class="nav-link text-slate-400 text-sm font-medium">About</a>
+          <a href="/frameworks" class="nav-link text-sm font-medium" style="color: #F7F9FC;">Frameworks</a>
+          <a href="/manifesto" class="nav-link text-slate-400 text-sm font-medium">Manifesto</a>
+          <a href="/coaching" class="nav-link text-slate-400 text-sm font-medium">Coaching</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://app.joinsocialcode.com/blog" class="nav-link text-slate-400 text-sm font-medium hover:text-white transition-colors">Blog</a>
+          <a href="https://app.joinsocialcode.com/assess" class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;">
+            FREE ASSESSMENT
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 rounded-lg" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="flex-col gap-2 pb-4 md:hidden">
+        <a href="/about" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">About</a>
+        <a href="/frameworks" class="block px-3 py-2.5 text-white text-sm font-medium" onclick="toggleMenu()">Frameworks</a>
+        <a href="/manifesto" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Manifesto</a>
+        <a href="/coaching" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Coaching</a>
+        <a href="https://app.joinsocialcode.com/blog" class="block px-3 py-2.5 text-slate-300 text-sm font-medium hover:text-white" onclick="toggleMenu()">Blog</a>
+        <a href="https://app.joinsocialcode.com/assess" class="mt-2 block text-center px-5 py-3 rounded-lg text-sm font-semibold text-white" style="background: #FF6B6B;" onclick="toggleMenu()">FREE ASSESSMENT</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="pt-32 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <span class="badge">The Frameworks</span>
+    <h1 class="mt-5 text-5xl sm:text-6xl font-black leading-none tracking-tight">
+      14 frameworks.<br/><span class="text-gradient">Zero fluff.</span>
+    </h1>
+    <p class="mt-5 text-slate-400 text-lg max-w-xl" style="font-family: 'Work Sans', sans-serif;">
+      Each framework is a distilled, repeatable system. Study it. Practice it. Use it.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FRAMEWORK CARDS -->
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-6">
+
+      <!-- Free Bundle -->
+      <article class="framework-card lg:col-span-2 rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(0,217,192,0.2);">
+        <div class="flex flex-col md:flex-row md:gap-10">
+          <div class="flex-1 mb-6 md:mb-0">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(77,232,212,0.1); color: #4DE8D4;">FA</div>
+              <span class="text-xs px-2.5 py-1 rounded-full font-semibold md:hidden" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle</span>
+            </div>
+            <h2 class="text-base font-bold text-white">Fearless Approach System</h2>
+            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #4DE8D4;">Overcoming Approach Anxiety</p>
+            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">The full architecture for approaching anyone — when to go, how to go, what to say. Includes SPARK and the 3-Second Scan.</p>
+          </div>
+          <div class="hidden md:block w-px bg-white/5 self-stretch"></div>
+          <div class="flex-1">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(0,217,192,0.12); color: #00D9C0;">TC</div>
+            </div>
+            <h2 class="text-base font-bold text-white">TALK Check</h2>
+            <p class="text-xs font-medium mt-0.5 mb-3" style="color: #00D9C0;">Tone · Attention · Language · Kinetics</p>
+            <p class="text-slate-400 text-sm leading-relaxed" style="font-family: 'Work Sans', sans-serif;">The 10-second delivery layer you run before every conversation. Start here — fastest to use in the real world.</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/5">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(0,217,192,0.1); color: #00D9C0;">Free Bundle — Both PDFs in one email</span>
+            <span class="text-xs text-slate-500" style="font-family: 'Work Sans', sans-serif;">Start with TALK Check, then FAS</span>
+          </div>
+          <div class="fw-email-form" data-framework="fearless-approach" data-color="#00D9C0">
+            <button class="fw-trigger w-full py-3 rounded-xl text-sm font-bold transition-all hover:opacity-90" style="background: #00D9C0; color: #080F18;">Get Both Free Frameworks →</button>
+            <div class="fw-input-row hidden mt-3 space-y-2">
+              <input type="text" placeholder="Your first name" class="fw-name w-full px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+              <div class="flex gap-2">
+                <input type="email" placeholder="your@email.com" class="fw-email flex-1 px-3 py-2.5 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none" style="background: #1A2332;" />
+                <button class="fw-send px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:opacity-90 whitespace-nowrap" style="background: #00D9C0; color: #080F18;">Send</button>
+              </div>
+              <p class="text-xs text-slate-600" style="font-family: 'Work Sans', sans-serif;">By submitting, you agree to receive emails from Social Code. Unsubscribe anytime.</p>
+            </div>
+            <p class="fw-msg hidden mt-2 text-xs text-center" style="color: #00D9C0;"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stop Replaying -->
+      <article class="framework-card rounded-2xl p-7 border flex flex-col" style="background: #131E2B; border-color: rgba(255,107,107,0.25);">
+        <div>
+          <div class="flex items-start justify-between mb-5">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">SR</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background: rgba(255,107,107,0.12); color: #FF6B6B;">$17</span>
+          </div>
+          <h2 class="text-lg font-bold text-white">Stop Replaying</h2>
+          <p class="text-xs font-medium mt-0.5 mb-4" style="color: #FF6B6B;">End the 2 AM Overthink Loop</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4" style="font-family: 'Work Sans', sans-serif;">For introverts who replay every conversation for days. Turn 3 days of rumination into 10 minutes of processing.</p>
+          <div class="space-y-2 mb-5">
+            <div class="flex items-center gap-2 text-xs text-slate-400"><span style="color: #FF6B6B;">✓</span> E-Book — the full framework</div>
+            <div class="flex items-center gap-2 text-xs text-slate-400"><span style="color: #FF6B6B;">✓</span> 30-Day Implementation Workbook included</div>
+          </div>
+        </div>
+        <div class="mt-auto">
+          <a href="https://8864150412757.gumroad.com/l/obzgfd" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl text-sm font-bold text-center transition-all hover:opacity-90" style="background: #FF6B6B; color: white;">Get the Complete System — $17 →</a>
+          <p class="text-xs text-slate-600 text-center mt-2" style="font-family: 'Work Sans', sans-serif;">Instant download · E-Book + Workbook</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ALL 14 FRAMEWORKS LIST -->
+  <section class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="badge">Full Library</span>
+      <h2 class="mt-5 text-3xl sm:text-4xl font-black tracking-tight">The complete system.</h2>
+      <p class="mt-4 text-slate-400" style="font-family: 'Work Sans', sans-serif;">All 14 frameworks, organized by what they solve.</p>
+    </div>
+    <div class="space-y-2">
+
+      <div class="rounded-2xl px-5 py-2 mb-1">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Initiation</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">SPARK</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Starting Conversations</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">3-Second Social Scan</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Reading Whether Someone Wants to Be Approached</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">Fearless Approach System</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">End-to-End Approach Anxiety Elimination</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">3-2-1 Send It</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Stopping Overthinking and Pulling the Trigger</p></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">Barista Method</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Building Social Reps in Zero-Stakes Environments</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Delivery &amp; Presence</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">TALK Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Delivery Layer for Any Interaction</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(0,217,192,0.1);color:#00D9C0;">Free Bundle</span></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Depth &amp; Continuity</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">DEPTH</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Taking Conversations from Surface to Real</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Confidence &amp; Inner Game</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">GROUND</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Confidence and Inner Game</p></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">Pre-Game System</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Confidence Preparation Before Any Social Situation</p></div></div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">Energy Check</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Social Energy Management and Strategic Engagement</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Speaking Up &amp; Group Dynamics</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">VOICE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Speaking Up in Groups and Claiming Your Space</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Difficult Conversations</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">BRAVE</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Navigating Difficult Conversations</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Difficult People</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div><p class="text-sm font-bold text-white">SHIELD</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Handling Difficult People and Energy Drains</p></div></div>
+
+      <div class="rounded-2xl px-5 py-2 mb-1 mt-6">
+        <p class="text-xs font-bold tracking-widest uppercase" style="color: #00D9C0;">Recovery &amp; Reset</p>
+      </div>
+      <div class="rounded-xl p-4 border border-white/5" style="background: #131E2B;"><div class="flex items-center justify-between"><div><p class="text-sm font-bold text-white">Stop Replaying</p><p class="text-xs text-slate-500 mt-0.5" style="font-family:'Work Sans',sans-serif;">Breaking the Post-Social Overthink Loop</p></div><span class="text-xs px-2.5 py-1 rounded-full" style="background:rgba(255,107,107,0.12);color:#FF6B6B;">$17</span></div></div>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="https://app.joinsocialcode.com/assess" class="btn-primary glow-pulse inline-flex items-center gap-2 px-7 py-4 rounded-xl text-base font-bold text-white" style="background: #FF6B6B;">
+        Find your starting point — Free Assessment →
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #080F18; border-top: 1px solid rgba(0,217,192,0.06);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <img src="logo.svg" alt="Social Code" width="120" height="32" class="h-8 w-auto opacity-75" />
+        <nav class="flex items-center gap-6">
+          <a href="/about" class="nav-link text-xs text-slate-600 hover:text-slate-400">About</a>
+          <a href="/frameworks" class="nav-link text-xs text-slate-400">Frameworks</a>
+          <a href="/manifesto" class="nav-link text-xs text-slate-600 hover:text-slate-400">Manifesto</a>
+          <a href="/coaching" class="nav-link text-xs text-slate-600 hover:text-slate-400">Coaching</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="https://youtube.com/@getsocialcode" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-slate-600 hover:text-[#FF6B6B] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://x.com/shavirowe" target="_blank" rel="noopener noreferrer" aria-label="X" class="text-slate-600 hover:text-[#00D9C0] transition-colors"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.instagram.com/getsocialcode" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-slate-600 hover:text-[#00D9C0] transition-colors"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        </div>
+        <div class="flex items-center gap-4 justify-center">
+          <p class="text-xs text-slate-700" style="font-family: 'Work Sans', sans-serif;">&copy; 2026 Social Code. All rights reserved.</p>
+          <a href="/privacy" class="text-xs text-slate-600 hover:text-slate-400 transition-colors" style="font-family: 'Work Sans', sans-serif;">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('menu-btn');
+      const isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    document.querySelectorAll('.fw-email-form').forEach(function(form) {
+      var trigger = form.querySelector('.fw-trigger');
+      var inputRow = form.querySelector('.fw-input-row');
+      var nameInput = form.querySelector('.fw-name');
+      var emailInput = form.querySelector('.fw-email');
+      var sendBtn = form.querySelector('.fw-send');
+      var msg = form.querySelector('.fw-msg');
+      var framework = form.dataset.framework;
+      var color = form.dataset.color;
+      trigger.addEventListener('click', function() { trigger.classList.add('hidden'); inputRow.classList.remove('hidden'); nameInput.focus(); });
+      sendBtn.addEventListener('click', function() {
+        var email = emailInput.value.trim();
+        var name = nameInput.value.trim();
+        if (!email) return;
+        sendBtn.textContent = 'Sending...';
+        sendBtn.disabled = true;
+        fetch('https://app.joinsocialcode.com/api/send-framework', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, framework })
+        }).then(r => r.json()).then(data => {
+          inputRow.classList.add('hidden'); msg.classList.remove('hidden');
+          if (data.success) { msg.textContent = 'Check your inbox — both PDFs are on their way. Start with TALK Check.'; msg.style.color = color; }
+          else { msg.textContent = data.error || 'Something went wrong. Try again.'; msg.style.color = '#FF6B6B'; }
+        }).catch(() => { inputRow.classList.add('hidden'); msg.classList.remove('hidden'); msg.textContent = 'Something went wrong. Try again.'; msg.style.color = '#FF6B6B'; });
+      });
+      emailInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendBtn.click(); });
+      nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') emailInput.focus(); });
+    });
+  </script>
+
+</body>
+</html>
