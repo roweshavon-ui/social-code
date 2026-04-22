@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".",
   "rewrites": [
+    { "source": "/privacy", "destination": "/privacy.html" },
     {
       "source": "/blog/:path*",
       "destination": "https://app.joinsocialcode.com/blog/:path*"
