@@ -930,6 +930,121 @@
   </section>
 
 
+  <div class="divider"></div>
+
+
+  <!-- 1:1 COACHING WAITLIST -->
+  <section class="py-24 reveal" style="background: #0D1825;">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="rounded-3xl p-10 sm:p-14" style="background: #131E2B; border: 1px solid rgba(255,107,107,0.2); box-shadow: 0 0 60px rgba(255,107,107,0.06);">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Left — offer details -->
+          <div>
+            <span class="badge" style="background: rgba(255,107,107,0.1); border-color: rgba(255,107,107,0.25); color: #FF6B6B;">1:1 Coaching — Waitlist Open</span>
+            <h2 class="mt-6 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
+              Work with<br/><span class="text-coral">Shavi directly.</span>
+            </h2>
+            <p class="mt-5 text-slate-400 leading-relaxed" style="font-family: 'Work Sans', sans-serif;">
+              8 private sessions. One framework per session. Built around your specific patterns, your specific situations, your specific sticking points.
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
+                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
+                8 sessions — one per framework, in order
+              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
+                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
+                Real-world practice assignments between sessions
+              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
+                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
+                Direct feedback on your specific situations
+              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300" style="font-family: 'Work Sans', sans-serif;">
+                <span class="text-coral mt-0.5 flex-shrink-0 font-bold">✓</span>
+                Access to the full 14-framework library
+              </li>
+            </ul>
+            <div class="mt-8 inline-flex items-baseline gap-2">
+              <span class="text-4xl font-black text-white">$2,000</span>
+              <span class="text-slate-500 text-sm" style="font-family: 'Work Sans', sans-serif;">/ 8 sessions · payment plans available</span>
+            </div>
+          </div>
+
+          <!-- Right — waitlist form -->
+          <div>
+            <div class="rounded-2xl p-7" style="background: #0D1825; border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-sm font-bold text-white mb-1">Join the waitlist</p>
+              <p class="text-xs text-slate-500 mb-6" style="font-family: 'Work Sans', sans-serif;">Spots are limited. You'll get first access when a slot opens.</p>
+
+              <div id="coaching-form" class="space-y-3">
+                <input
+                  id="coaching-name"
+                  type="text"
+                  placeholder="Your first name"
+                  class="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none focus:border-coral transition-colors"
+                  style="background: #131E2B;"
+                />
+                <input
+                  id="coaching-email"
+                  type="email"
+                  placeholder="your@email.com"
+                  class="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-slate-600 border border-white/5 outline-none focus:border-coral transition-colors"
+                  style="background: #131E2B;"
+                />
+                <button
+                  id="coaching-btn"
+                  onclick="joinCoachingWaitlist()"
+                  class="btn-primary w-full py-3.5 rounded-xl text-sm font-bold text-white"
+                  style="background: #FF6B6B;"
+                >
+                  Join the Waitlist
+                </button>
+                <p class="text-xs text-slate-600 text-center" style="font-family: 'Work Sans', sans-serif;">No spam. Just a heads-up when a spot opens.</p>
+              </div>
+              <p id="coaching-msg" class="hidden text-sm text-center font-medium mt-4" style="color: #00D9C0;"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    async function joinCoachingWaitlist() {
+      const name = document.getElementById('coaching-name').value.trim();
+      const email = document.getElementById('coaching-email').value.trim();
+      const btn = document.getElementById('coaching-btn');
+      const msg = document.getElementById('coaching-msg');
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById('coaching-email').style.borderColor = 'rgba(255,107,107,0.5)';
+        return;
+      }
+      document.getElementById('coaching-email').style.borderColor = '';
+
+      btn.disabled = true;
+      btn.textContent = 'Joining...';
+
+      try {
+        await fetch('https://app.joinsocialcode.com/api/send-framework', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, framework: 'coaching-waitlist' }),
+        });
+      } catch (_) {}
+
+      document.getElementById('coaching-form').classList.add('hidden');
+      msg.classList.remove('hidden');
+      msg.textContent = "You're on the list. I'll reach out personally when a spot opens.";
+    }
+  </script>
+
+
   <!-- LATEST POSTS -->
   <section class="py-24 reveal" style="background: #101B28;">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
