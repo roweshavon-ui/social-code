@@ -29,7 +29,7 @@
 - [x] Add CRON_SECRET to Vercel environment variables (Production) and redeploy to activate cron
 
 ## App (social-code-app)
-- [ ] Handle `coaching-waitlist` in `/api/send-framework` — waitlist form submits but no email is sent. Needs a Kit tag + confirmation email wired up in the app.
+- [x] Handle `coaching-waitlist` in `/api/send-framework` — sends confirmation email to user + notification to shavi@joinsocialcode.com, saves lead to Supabase
 
 ## Security — CRITICAL (do these first)
 - [ ] **Rotate all secrets** — Resend API key, Anthropic API key, Supabase service role key, ADMIN_TOKEN, ENCRYPTION_KEY, ADMIN_PASSWORD (do in each dashboard manually)
@@ -40,9 +40,9 @@
 - [ ] **Replace Math.random() with crypto.randomInt** in `app/lib/portalAuth.ts` temp password generation (C6)
 
 ## Security — HIGH
-- [ ] **Add security headers** — no CSP, HSTS, X-Frame-Options, X-Content-Type-Options on either project (H5)
-- [ ] **Add rate limiting** — login brute-force, API cost abuse, subscriber spam all unprotected (H2)
-- [ ] **Fix CORS wildcard** on comments and posts API — change `*` to `https://app.joinsocialcode.com` (H1)
+- [x] **Add security headers** — CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy added via next.config.ts (H5)
+- [x] **Add rate limiting** — login (5 req/min), send-framework (3 req/min) rate limited by IP (H2)
+- [x] **Fix CORS wildcard** — posts API locked to joinsocialcode.com, comments API locked to app.joinsocialcode.com (H1)
 - [ ] **Add auth to file upload endpoint** — `/api/library/upload` has no admin check (H3)
 - [ ] **Fix forgot-password email lookup** — emails stored encrypted but queried raw so reset never works (H6)
 - [ ] **Add signed token to unsubscribe URL** — anyone can unsubscribe any email from Kit (H7)
