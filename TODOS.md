@@ -49,10 +49,10 @@
 - [x] **Sanitize blog content** — sanitize() strips script/iframe/on*/javascript: from renderMarkdown output (H4)
 
 ## Security — MEDIUM
-- [ ] **Add input length/schema validation** with Zod on all API route request bodies (M2)
-- [ ] **Wrap Anthropic errors** — raw error messages currently returned to client (M3)
-- [ ] **Shorten admin session cookie** — currently 30-day static token with no revocation (M6)
-- [ ] **Run npm audit** in social-code-app — dependency vulnerability status unknown (L4)
+- [x] **Add input length/schema validation** — Zod added to comments POST and send-framework POST (M2)
+- [x] **Wrap Anthropic errors** — all generate-* routes return generic "Generation failed" instead of raw error (M3)
+- [x] **Shorten admin session cookie** — reduced from 30 days to 8 hours (M6)
+- [x] **Run npm audit** — Next.js upgraded to latest, 0 vulnerabilities remaining (L4)
 
 ## Low
 - [x] Add twitter:site and twitter:creator meta tags
