@@ -23,6 +23,10 @@
 ## Blog
 - [x] Blog post: "Why introverts are actually better at deep conversations" — published Apr 22 2026
 - [x] Blog post page SEO — added canonical, Twitter cards, og:image, og:publishedTime, og:authors, Article JSON-LD (applies to all posts)
+- [x] 10-post content calendar researched and written (Apr 29 – Jun 30 2026) — topics from Reddit signal, competitor gaps, adjacent niches
+- [x] Auto-publish cron — Vercel cron runs every Tuesday 9am UTC, flips scheduled drafts live automatically
+- [x] Admin drafts page — /admin/drafts shows full scheduled queue with countdown to go-live dates
+- [ ] Add CRON_SECRET to Vercel environment variables (Production) and redeploy to activate cron
 
 ## App (social-code-app)
 - [ ] Handle `coaching-waitlist` in `/api/send-framework` — waitlist form submits but no email is sent. Needs a Kit tag + confirmation email wired up in the app.
